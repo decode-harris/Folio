@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css?family=Baskervville&display=swap');
+
+/* reset html */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Baskervville', serif;
+    
+}
+
+/* css variables */
+:root {
+    --wireframe: 4px solid darkblue;
+    --debugging: 3px dotted red;
+
+    --spacing-sm: 2% 1%;
+    --spacing-md: 2% 5%;
+    --spacing-lg: 10%;
+
+    --display-txt: #FFF;
+    --content-txt: #000;
+}
+
+/* 
+    globals
+
+    [ body ]    = body
+
+    font sizing
+    
+    [ h1 - h5 ]     = headings
+    [ p ]           = paragraphs
+    [ a & i ]       = links & icons
+*/
+body {
+    background: rgb(200, 200, 200);
+}
+
+h1 {font-size: 3.5rem;}
+h2 {font-size: 3rem;}
+h3 {font-size: 2.5rem;}
+h4 {font-size: 2rem;}
+h5 {font-size: 1.5rem;}
+
+p {font-size: 1.35rem;}
+i {font-size: 2.5rem;}
+a {font-size: 1.75rem;}
+
+/* 
+    header header layout
+    
+    [ header ]      = header
+    [ elmnts ]      = div
+    
+*/
+.header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+
+    margin: var(--spacing-md);
+}
+.header .elmnts {
+    display: flex;
+    justify-content: center;
+
+    border: var(--wireframe);
+    background: #FFF;
+    padding: var(--spacing-md);
+}
+.header .elmnts:nth-child(1) {
+    grid-column: span 8;
+    grid-row: span 2;
+    flex-direction: column;
+}
+.header .elmnts:nth-child(2) {
+    grid-column: span 4;
+    grid-row: span 2;
+    align-items: center;
+}
+.header .elmnts:nth-child(3) {
+    grid-column: span 12;
+    grid-row: span 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 
+    main content layout
+
+    [ main ]    = content
+    [ div ]     = elmnts
+
+*/
+.content  {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    
+    margin: var(--spacing-md);
+}
+.content .elmnts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: var(--wireframe);
+    padding: var(--spacing-md);
+    background: #FFF;
+}
+.content .elmnts:nth-child(1) {
+    grid-column: span 12;
+    grid-row: span 1;
+}
+.content .elmnts:nth-child(2),
+.content .elmnts:nth-child(3), 
+.content .elmnts:nth-child(4),
+.content .elmnts:nth-child(5) {
+    grid-column: span 12;
+    grid-row: span 2;
+}
+
+/* 
+    article layout components
+
+    [ article ]     = article
+    [ panels ]      = div
+
+*/
+article {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 10px;
+
+}
+article .panels {
+    border: var(--wireframe);
+    background: lightgreen;
+    /* background: lightseagreen;
+    color: #FFF; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md);
+}
+article .panels:nth-child(1) {
+    grid-column: span 8;
+    grid-row: span 4;
+    
+    flex-direction: column;
+}
+article .panels:nth-child(2) {
+    grid-column: span 4;
+    grid-row: span 4;
+
+    flex-direction: column;
+}
+article .panels:nth-child(3) {
+    grid-column: span 8;
+    grid-row: span 2;
+
+    flex-direction: column;
+}
+article .panels:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+
+/* 
+    section skills layout
+    
+    [ skills ]      = section
+    [ elmnts ]      = div
+
+*/
+.skills {
+    background: rgb(200, 200, 200);
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+
+    margin: var(--spacing-md);
+}
+.skills .elmnts {
+    
+    background: #FFF;
+    border: var(--wireframe);
+    padding: var(--spacing-md);
+
+}
+.skills .elmnts:nth-child(1) {
+    grid-column: span 12;
+    grid-row: span 1;
+    /* background: transparent; */
+    text-align: center;
+}
+.skills .elmnts:nth-child(2),
+.skills .elmnts:nth-child(3),
+.skills .elmnts:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+/* 
+    footer component
+
+    [ footer ]      = footer
+    [ elmnts ]      = div
+
+*/
+.footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 10px;
+    
+    margin: var(--spacing-md);
+}
+.footer .elmnts {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    border: var(--wireframe);
+}
+.footer .elmnts:nth-child(1) {
+    grid-column: span 12;
+    grid-row: span 2;
+    /* background: transparent; */
+}
+.footer .elmnts:nth-child(2),
+.footer .elmnts:nth-child(3) {
+    grid-column: span 6;
+    grid-row: span 6;
+}
+.footer .elmnts:nth-child(4),
+.footer .elmnts:nth-child(5),
+.footer .elmnts:nth-child(6) {
+    grid-column: span 4;
+    grid-row: span 4;
+}
+.footer .elmnts:nth-child(7) {
+    grid-column: span 10;
+    grid-row: span 2;
+}
+.footer .elmnts:nth-child(8) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+/*  
+    component styles
+
+    [ header ]
+    [ content ]
+    [ skills ]
+    [ footer ]
+
+*/
+
+/* header styles */
+.header a {
+    margin: auto;
+    color: #000;   
+}
+.header i {
+    color: darkblue;
+}
+.header p {
+    letter-spacing: 2px;
+    padding: var(--spacing-sm);
+}
+.header h1 {
+    letter-spacing: 5px;
+
+}
+
+
+
+
+/* 
+    panels styles
+*/
+.panels button {
+    
+    background: #FFF;
+    /* background: transparent; */
+    border: var(--wireframe);
+    color: #000;
+    
+    font-size: 1.24rem;
+
+    font-weight: bold;
+    
+    margin: auto;
+    padding: var(--spacing-md);
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.panels button:hover {
+    letter-spacing: 2px;
+}
+.panels p {
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+
+
+
+.elmnts.elmnts:nth-child(1) p {
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* [ ul mainlist ]  = list  
+            [ li ] = main list item
+
+                [ ul sublist ]
+                    [ li ] = sub list item */
+
+.skills h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    padding: var(--spacing-md);
+    /* border: var(--wireframe); */
+    min-height: 130px;
+}
+/* skills lists */
+.skills .mainlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 1.55rem;
+    text-align: center;
+    width: 100%;
+}
+.skills .mainlist .mainitems {
+    list-style-type: none;
+    padding: var(--spacing-md);
+    width: 100%;
+}
+.skills .sublist .subitems {
+    font-size: 0.9rem;
+    list-style-type: circle;
+    padding: var(--spacing-sm);
+    
+}
+
+
+
+
+/* 
+    header element tags
+    
+    [ title ]   = h1
+    [ tagline ] = p
+    [ intro ]   = p
+    [ links ]   = a
+    [ icons ]   = i
+
+*/
+
+
+
+    
+
+
+
+
+/* article button {
+    background: transparent;
+    min-width: 250px;
+    font-weight: bold;
+    font-size: 1.34rem;
+    letter-spacing: 2px;
+    padding: var(--spacing-sm);
+    color: #FFF;
+    margin: auto;
+}
+
+article p {
+    padding: var(--spacing-sm);
+}
+article h4 {
+    font-weight: bold;
+    letter-spacing: 12px;
+    text-decoration: underline;
+    padding-bottom: var(--spacing-md);
+} */
+/* article .preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+
+.preview_phkt {
+    background-image: url(phkt.jpg);
+}
+.preview_trvl {
+    background-image: url(trvl.jpg);
+}
+.preview_dash {
+    background-image: url(dash.jpg);
+} */
+
+
+
+
+
+
+/*  
+    contact component
+
+*/
+
+/* .contact {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+
+    background: rgb(200, 200, 200);
+    margin: var(--spacing-sm);
+}
+.contact .elmnts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFF;
+    
+    padding: var(--spacing-md);
+    border: var(--wireframe);
+}
+.contact .elmnts:nth-child(1) {
+    grid-column: span 12;
+    grid-row: span 1;
+    text-align: center;
+    align-items: center;
+    background: transparent;
+    
+}
+.contact .elmnts:nth-child(2) {
+    grid-column: span 6;
+    grid-row: span 4;
+}
+.contact .elmnts:nth-child(3) {
+    grid-column: span 6;
+    grid-row: span 4;
+}
+.contact .elmnts:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 2;
+    align-items: center;
+}
+.contact .elmnts:nth-child(5) {
+    grid-column: span 4;
+    grid-row: span 2;
+    align-items: center;
+}
+.contact .elmnts:nth-child(6) {
+    grid-column: span 4;
+    grid-row: span 2;
+    align-items: center;
+} */
+
+
+
+/* .contact .elmnts .profile_img {
+    
+    height: 100%;
+    width: 100%;
+    background-image: url(profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    
+}
+.contact h3, 
+.contact p {
+    padding-left: var(--spacing-md);   
+}
+.contact h2 {
+    padding: var(--spacing-md);
+} */
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .header,
+    .contact,
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .header .elmnts,
+    .contact .elmnts,
+    .footer .elmnts {
+        grid-column: span 1;
+        grid-row: span 4;
+    }
+    
+    
+}
