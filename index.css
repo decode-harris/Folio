@@ -38,6 +38,10 @@ body {
     background: rgb(200, 200, 200);
 }
 
+.elmnts.elmnts:nth-child(1) p {
+    font-style: italic;
+}
+
 h1 {font-size: 3.5rem;}
 h2 {font-size: 3rem;}
 h3 {font-size: 2.5rem;}
@@ -45,8 +49,8 @@ h4 {font-size: 2rem;}
 h5 {font-size: 1.5rem;}
 
 p {font-size: 1.35rem;}
-i {font-size: 2.5rem;}
-a {font-size: 1.75rem;}
+i {font-size: 2.1rem;}
+a {font-size: 1.35rem;}
 
 /* 
     header header layout
@@ -211,6 +215,39 @@ article .panels:nth-child(4) {
     grid-row: span 1;
 }
 
+
+
+/* 
+    skills list layout
+
+    [ ul mainlist ]  = list  
+        [ li ] = main list item
+    [ ul sublist ]
+        [ li ] = sub list item 
+*/
+
+.skills .mainlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 1.55rem;
+    text-align: center;
+    width: 100%;
+}
+.skills .mainlist .mainitems {
+    list-style-type: none;
+    padding: var(--spacing-md);
+    width: 100%;
+}
+.skills .sublist .subitems {
+    font-size: 0.9rem;
+    list-style-type: circle;
+    padding: var(--spacing-sm);
+    
+}
+
 /* 
     footer component
 
@@ -266,6 +303,7 @@ article .panels:nth-child(4) {
 
     [ header ]
     [ content ]
+    [ panels ]
     [ skills ]
     [ footer ]
 
@@ -288,21 +326,19 @@ article .panels:nth-child(4) {
 
 }
 
-
-
-
-/* 
-    panels styles
-*/
+/* panels styles */
+.panels h4 {
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-decoration: underline;
+    padding-bottom: var(--spacing-md);
+} 
 .panels button {
-    
-    background: #FFF;
-    /* background: transparent; */
+    background: transparent;
     border: var(--wireframe);
     color: #000;
     
     font-size: 1.24rem;
-
     font-weight: bold;
     
     margin: auto;
@@ -320,49 +356,7 @@ article .panels:nth-child(4) {
     text-align: center;
 }
 
-
-
-
-.elmnts.elmnts:nth-child(1) p {
-    font-style: italic;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* [ ul mainlist ]  = list  
-            [ li ] = main list item
-
-                [ ul sublist ]
-                    [ li ] = sub list item */
-
+/* skills styles */
 .skills h3 {
     display: flex;
     justify-content: center;
@@ -371,203 +365,103 @@ article .panels:nth-child(4) {
     font-style: italic;
     text-align: center;
     padding: var(--spacing-md);
-    /* border: var(--wireframe); */
+    border: var(--wireframe);
     min-height: 130px;
 }
-/* skills lists */
-.skills .mainlist {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    font-size: 1.55rem;
-    text-align: center;
-    width: 100%;
-}
-.skills .mainlist .mainitems {
-    list-style-type: none;
-    padding: var(--spacing-md);
-    width: 100%;
-}
-.skills .sublist .subitems {
-    font-size: 0.9rem;
-    list-style-type: circle;
-    padding: var(--spacing-sm);
-    
-}
-
-
-
 
 /* 
-    header element tags
-    
-    [ title ]   = h1
-    [ tagline ] = p
-    [ intro ]   = p
-    [ links ]   = a
-    [ icons ]   = i
+    media queries
+
+    [ tablet ] = > 790 px < 1000px
+    [ mobile ] = < 790 px
 
 */
-
-
-
-    
-
-
-
-
-/* article button {
-    background: transparent;
-    min-width: 250px;
-    font-weight: bold;
-    font-size: 1.34rem;
-    letter-spacing: 2px;
-    padding: var(--spacing-sm);
-    color: #FFF;
-    margin: auto;
-}
-
-article p {
-    padding: var(--spacing-sm);
-}
-article h4 {
-    font-weight: bold;
-    letter-spacing: 12px;
-    text-decoration: underline;
-    padding-bottom: var(--spacing-md);
-} */
-/* article .preview {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    width: 80%;
-
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-}
-
-
-
-.preview_phkt {
-    background-image: url(phkt.jpg);
-}
-.preview_trvl {
-    background-image: url(trvl.jpg);
-}
-.preview_dash {
-    background-image: url(dash.jpg);
-} */
-
-
-
-
-
-
-/*  
-    contact component
-
-*/
-
-/* .contact {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
-
-    background: rgb(200, 200, 200);
-    margin: var(--spacing-sm);
-}
-.contact .elmnts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #FFF;
-    
-    padding: var(--spacing-md);
-    border: var(--wireframe);
-}
-.contact .elmnts:nth-child(1) {
-    grid-column: span 12;
-    grid-row: span 1;
-    text-align: center;
-    align-items: center;
-    background: transparent;
-    
-}
-.contact .elmnts:nth-child(2) {
-    grid-column: span 6;
-    grid-row: span 4;
-}
-.contact .elmnts:nth-child(3) {
-    grid-column: span 6;
-    grid-row: span 4;
-}
-.contact .elmnts:nth-child(4) {
-    grid-column: span 4;
-    grid-row: span 2;
-    align-items: center;
-}
-.contact .elmnts:nth-child(5) {
-    grid-column: span 4;
-    grid-row: span 2;
-    align-items: center;
-}
-.contact .elmnts:nth-child(6) {
-    grid-column: span 4;
-    grid-row: span 2;
-    align-items: center;
-} */
-
-
-
-/* .contact .elmnts .profile_img {
-    
-    height: 100%;
-    width: 100%;
-    background-image: url(profile.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    
-}
-.contact h3, 
-.contact p {
-    padding-left: var(--spacing-md);   
-}
-.contact h2 {
-    padding: var(--spacing-md);
-} */
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+    /* grid properties */
     .header,
-    .contact,
+    .skills,
     .footer {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(100px, auto);
     }
+    /* flex properties */
     .header .elmnts,
-    .contact .elmnts,
+    .skills .elmnts,
     .footer .elmnts {
+        text-align: center;
+    }
+    /* grid elements */
+    .header .elmnts:nth-child(1),
+    .header .elmnts:nth-child(2),
+    .header .elmnts:nth-child(3) {
+        grid-column: span 3;
+        grid-row: span 1;
+
+        text-align: center;
+    }
+    /* skills elmnts */
+    .skills .elmnts:nth-child(1),
+    .skills .elmnts:nth-child(2),
+    .skills .elmnts:nth-child(3),
+    .skills .elmnts:nth-child(4) {
+        grid-column: span 3;
+        grid-row: span 1;
+
+        text-align: center;
+    }
+    /* move programming skills to top in mobile */
+    .skills .elmnts:nth-child(3) {
+        grid-row: 2;
+    }
+    /* footer generic elmnts */
+    .footer .elmnts:nth-child(1),
+    .footer .elmnts:nth-child(2),
+    .footer .elmnts:nth-child(7),
+    .footer .elmnts:nth-child(8) {
+        grid-column: span 3;
+        grid-row: span 1;
+
+        
+    }
+    /* footer image elmnts */
+    .footer .elmnts:nth-child(3) {
+        display: none;
+    }
+    /* footer nav elmnts */
+    .footer .elmnts:nth-child(4),
+    .footer .elmnts:nth-child(5),
+    .footer .elmnts:nth-child(6) {
         grid-column: span 1;
+        grid-row: span 1;
+
+        
+    }
+    /* article project panels */
+    article {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        
+    }
+    article .panels {
+        text-align: center;
+        
+    }
+    article .panels:nth-child(1) {
+        grid-column: span 4;
         grid-row: span 4;
     }
-    
-    
+    article .panels:nth-child(2) {
+        grid-column: span 4;
+        grid-row: span 4;
+    }
+    article .panels:nth-child(3) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    article .panels:nth-child(4) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 }
