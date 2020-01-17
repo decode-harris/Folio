@@ -410,7 +410,7 @@ article .panels:nth-child(4) {
     [ mobile ] = < 790 px
 
 */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
     /* grid properties */
     .header,
     .skills,
