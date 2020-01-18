@@ -648,6 +648,8 @@ a {font-size: 1.35rem;}
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: minmax(100px, auto);
+
+        text-align: center;
     }
     
     /* element properties */
@@ -656,7 +658,7 @@ a {font-size: 1.35rem;}
     .header .elmnts:nth-child(3) {
         grid-column: span 6;
         grid-row: span 1;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .content .elmnts:nth-child(1),
@@ -666,7 +668,7 @@ a {font-size: 1.35rem;}
     .content .elmnts:nth-child(5) {
         grid-column: span 6;
         grid-row: span 1;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .subcontent .elmnts:nth-child(1),
@@ -676,7 +678,7 @@ a {font-size: 1.35rem;}
     .subcontent .elmnts:nth-child(5) {
         grid-column: span 6;
         grid-row: span 1;
-        text-align: center;
+        /* text-align: center; */
     }
     
     .footer .elmnts:nth-child(1),
