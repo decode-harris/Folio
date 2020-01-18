@@ -9,12 +9,28 @@
     <title>Decode Harris</title>
 
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
     <script src="https://kit.fontawesome.com/4dff4a55ad.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="body">
+    <!-- nav -->
+    <nav>
+        <a href="#header">home</a>
+        <a href="#content">projects
+            <ul class="dropdown">
+                <li>Phuket Marriott</li>
+                <li>TRVL Web App</li>
+                <li>Dashboard Js</li>
+                <li>Display Template</li>
+            </ul>
+        </a>
+        <a href="#subcontent">skills</a>
+        <a href="#footer">info</a>
+    </nav>
+    <!-- nav -->
+    
     <!-- header -->
-    <header class="header" id="view_top">
+    <header class="header" id="header">
         <!-- [ heading ] elmnts -->
         <div class="elmnts">
             <h1>Christopher Harris</h1>
@@ -53,7 +69,7 @@
     <!-- header -->
     
     <!-- content -->
-    <main class="content">
+    <main class="content" id="content">
 
         <!-- [ heading ] elmnts -->
         <div class="elmnts">
@@ -63,7 +79,7 @@
         <!-- [ heading ] elmnts -->
 
         <!-- [ project 01 ] elmnts -->
-        <div class="elmnts">
+        <div class="elmnts" id="project_phkt">
             <article>
                 <div class="panels">
                     <h4>Phuket Marriott Resort</h4>
@@ -80,11 +96,9 @@
                     </p>
                 </div>
                 <div class="panels">
-                    <!-- background image placement -->
-                    <div class="preview preview_phkt">
+                    <div class="preview preview_trvl">
                         <h5>Phuket Marriott Preview</h5>
                     </div>
-                    <!-- background image placement -->
                 </div>
                 <div class="panels">
                     <h5>Build Tools</h5>
@@ -97,15 +111,15 @@
                     </ul>
                 </div>
                 <div class="panels">
-                    <button>View Site</button>
-                    <button>View Code</button>
+                    <button>Live Site</button>
+                    <button id="modal_case01" class="modalBtn" onclick="modalView()">Overview</button>
                 </div>
             </article>
         </div>
         <!-- [ project 01 ] elmnts -->
 
         <!-- [ project 02 ] elmnts -->
-        <div class="elmnts">
+        <div class="elmnts" id="project_trvl">
             <article>
                 <div class="panels">
                     <h4>Travel Highlights App</h4>
@@ -137,15 +151,15 @@
                     </ul>
                 </div>
                 <div class="panels">
-                    <button>View Site</button>
-                    <button>View Code</button>
+                    <button>Live Site</button>
+                    <button id="modal_case02" class="modalBtn" onclick="modalView()">Overview</button>
                 </div>
             </article>
         </div>
         <!-- [ project 02 ] elmnts -->
 
         <!-- [ project 03 ] elmnts -->
-        <div class="elmnts">
+        <div class="elmnts" id="project_dash">
             <article>
                 <div class="panels">
                     <h4>Dashboard JS</h4>
@@ -178,15 +192,15 @@
                     </ul>
                 </div>
                 <div class="panels">
-                    <button>View Site</button>
-                    <button>View Code</button>
+                    <button>Live Site</button>
+                    <button id="modal_case03" class="modalBtn" onclick="modalView()">Overview</button>
                 </div>
             </article>
         </div>
         <!-- [ project 03 ] elmnts -->
 
         <!-- [ project 04 ] elmnts -->
-        <div class="elmnts">
+        <div class="elmnts" id="project_disp">
             <article>
                 <div class="panels">
                     <h4>Display Folio</h4>
@@ -218,8 +232,8 @@
                     </ul>
                 </div>
                 <div class="panels">
-                    <button>View Site</button>
-                    <button>View Code</button>
+                    <button>Live Site</button>
+                    <button id="modal_case04" class="modalBtn" onclick="modalView()">Overview</button>
                 </div>
             </article>
         </div>
@@ -228,13 +242,22 @@
     <!-- content -->
 
     <!-- skills -->
-    <section class="skills">
+    <section class="subcontent" id="subcontent">
         <!-- [ skills ] elmnts -->
         <div class="elmnts">
             <h2>Skills</h2>
             <p>Technology enthusiast comfortable with a wide range of software & tooling</p>
         </div>
         <!-- [ skills ] elmnts -->
+
+        <!-- subcontent info -->
+        <div class="elmnts">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nulla fuga nesciunt, eveniet mollitia amet voluptatibus.
+            </p>
+        </div>
+        <!-- subcontent info -->
 
         <!-- [ software ] elmnts -->
         <div class="elmnts">
@@ -281,41 +304,41 @@
             <h3>Programming</h3>
 
             <ul class="mainlist">
-                <li class="mainitems">Frontend : HTML CSS JS
+                <li class="mainitems">Frontend Technologies
                     <ul class="sublist">
+                        <li class="subitems">HTML, CSS & Javascript</li>
                         <li class="subitems">Web libraries, frameworks & preprocessors</li>
-                        <li class="subitems">SEO Practices</li>
-                        <li class="subitems">Responsive Design</li>
+                        <li class="subitems">Responsive Design & SEO Practices</li>
                     </ul>
                 </li>
-                <li class="mainitems">Framework : React JS
+                <li class="mainitems">Frameworks & Libraries
                     <ul class="sublist">
-                        <li class="subitems">React Router</li>
-                        <li class="subitems">Callbacks & Inheritence</li>
+                        <li class="subitems">React Js, React Router, Next.Js</li>
+                        <li class="subitems">Gatsby JS, Flutter, Docker</li>
                         <li class="subitems">Resuable Modules</li>
                     </ul>
                 </li>
-                <li class="mainitems">Backend : PHP & Node JS
+                <li class="mainitems">Database & Backend
                     <ul class="sublist">
-                        <li class="subitems">Validation & Authentication</li>
-                        <li class="subitems">MySQL Database</li>
-                        <li class="subitems">Backend Procedures</li>
+                        <li class="subitems">PHP Validation & Authentication</li>
+                        <li class="subitems">MySQL Database Implementation</li>
+                        <li class="subitems">MS Access, OracleDB, mySQL</li>
                     </ul>
                 </li>
-                <li class="mainitems">Hosting : Github & Netlify
+                <li class="mainitems">Hosting & CLI
                     <ul class="sublist">
-                        <li class="subitems">Pull Request, Push, Commit & Clone</li>
-                        <li class="subitems">Terminal Development Intergration</li>
-                        <li class="subitems">Hosting & Support</li>
+                        <li class="subitems">Github, Netlify, Webhost</li>
+                        <li class="subitems">Gitbash, PowerShell, Git, Terminal</li>
+                        <li class="subitems">Bluehost, 000Web, GoDaddy, AWS</li>
                     </ul>
                 </li>
-                <li class="mainitems">CLI
+                <!-- <li class="mainitems">CLI
                     <ul class="sublist">
                         <li class="subitems">PowerShell, Gitbash & Terminal</li>
                         <li class="subitems">NPM Implementations</li>
                         <li class="subitems">Directory Configurations & Debugging</li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- [ programming ] elmnts -->
@@ -324,7 +347,7 @@
         <div class="elmnts">
             <h3>Personal</h3>
             <ul class="mainlist">
-                <li class="mainitems">Research
+                <li class="mainitems">Research & Learning
                     <ul class="sublist">
                         <li class="subitems">Procuring information on latest practices</li>
                         <li class="subitems">Advancing my knowledge with Javascript</li>
@@ -332,7 +355,7 @@
                     </ul>
                 </li>
                 
-                <li class="mainitems">Passionate
+                <li class="mainitems">Passionate & Driven
                     <ul class="sublist">
                         <li class="subitems">Been around technology & software my whole life</li>
                         <li class="subitems">Researching about latest developments & updates</li>
@@ -340,7 +363,7 @@
                     </ul>
                 </li>
             
-                <li class="mainitems">Organisation
+                <li class="mainitems">Organisational Skills
                     <ul class="sublist">
                         <li class="subitems">Attention to detail</li>
                         <li class="subitems">Design to specification</li>
@@ -348,7 +371,7 @@
                     </ul>
                 </li>
                 
-                <li class="mainitems">Attitude
+                <li class="mainitems">Attitude & Personality
                     <ul class="sublist">
                         <li class="subitems">Chill & laidback</li>
                         <li class="subitems">Non political & non judgemental</li>
@@ -362,11 +385,11 @@
     <!-- skills -->
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <!-- elmnts -->
         <div class="elmnts">
             <h2>Information</h2>
-            <p>Always happy to have a friendly chat</p>
+            <p>Always down for a friendly chat about all things technology</p>
         </div>
         <div class="elmnts">
             <h3>Christopher Harris</h3>
@@ -392,8 +415,13 @@
             <span>Feel free to email if you feel like a chat</span>
         </div>
         <div class="elmnts">
+            <i class="fab fa-linkedin"></i>
+            <a href="#">LinkedIn</a>
+            <span>View my linkedIn profile for relevent employment information</span>
+        </div>
+        <div class="elmnts">
             <p>The developer thanks you kindly for visiting this page.</p>
-            <p>By Christopher Harris 2020 &copy;</p>
+            <!-- <p>By Christopher Harris 2020 &copy;</p> -->
         </div>
         <div class="elmnts">
             <a href="#view_top">Back To Top</a>
@@ -402,6 +430,159 @@
     </footer>
     <!-- footer -->
 
+    <div class="modal_container">
+        <!-- modals -->
+        <aside id="project_01">
+            <!-- elmnts -->
+            <div class="elmnts">
+                <header>
+                    <h2>Project 01 Case Study</h2>
+
+                    <p>
+                        <b>Scope : </b>
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    </p>
+                </header>
+
+                
+            </div>
+            <div class="elmnts">
+                <h4>Phuket Marriott Resort</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta.
+                </p>
+            </div>
+            <div class="elmnts"></div>
+            <div class="elmnts"></div>
+            <div class="elmnts">
+                <button>
+                    <i class="fab fa-github"></i>
+                    Github Repo
+                </button>
+            </div>
+            <!-- elmnts -->
+        </aside>
+
+        <aside id="project_02">
+            <!-- elmnts -->
+            <div class="elmnts">
+                <header>
+                    <h2>Project 02 Case Study</h2>
+
+                    <p>
+                        <b>Scope : </b>
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    </p>
+                </header>
+
+                
+            </div>
+            <div class="elmnts">
+                <h4>TRVL Web Application</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta.
+                </p>
+            </div>
+            <div class="elmnts"></div>
+            <div class="elmnts"></div>
+            <div class="elmnts">
+                <button>
+                    <i class="fab fa-github"></i>
+                    Github Repo
+                </button>
+            </div>
+            <!-- elmnts -->
+        </aside>
+
+        <aside id="project_03">
+            <!-- elmnts -->
+            <div class="elmnts">
+                <header>
+                    <h2>Project 03 Case Study</h2>
+
+                    <p>
+                        <b>Scope : </b>
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    </p>
+                </header>
+
+                
+            </div>
+            <div class="elmnts">
+                <h4>Dashboard Projects Tracker</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta.
+                </p>
+            </div>
+            <div class="elmnts"></div>
+            <div class="elmnts"></div>
+            <div class="elmnts">
+                <button>
+                    <i class="fab fa-github"></i>
+                    Github Repo
+                </button>
+            </div>
+            <!-- elmnts -->
+        </aside>
+
+        <aside id="project_04">
+            <!-- elmnts -->
+            <div class="elmnts">
+                <header>
+                    <h2>Project 04 Case Study</h2>
+
+                    <p>
+                        <b>Scope : </b>
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Modi, exercitationem. Alias, quo repellat. 
+                    </p>
+                </header>
+
+                
+            </div>
+            <div class="elmnts">
+                <h4>Display - Templating System</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta.
+                </p>
+            </div>
+            <div class="elmnts"></div>
+            <div class="elmnts"></div>
+            <div class="elmnts">
+                <button>
+                    <i class="fab fa-github"></i>
+                    Github Repo
+                </button>
+            </div>
+            <!-- elmnts -->
+        </aside>
+
+        <!-- <aside></aside>
+        <aside></aside>
+        <aside></aside> -->
+        <!-- modals -->
+
+        <button class="closeBtn">X</button>
+    </div>
 
 </body>
 </html>
