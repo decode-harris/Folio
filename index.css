@@ -128,7 +128,7 @@ html {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
+    gap: 100px 10px;
     
     margin: var(--spacing-md);
     padding-top: 10vh;
@@ -224,7 +224,7 @@ html {
     padding-top: 10vh;
 }
  .footer .elmnts {
-    padding: var(--spacing-md);
+    /* padding: var(--spacing-md); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -259,6 +259,8 @@ html {
     grid-column: span 2;
     grid-row: span 1;
 }
+/* 
+
 /* 
 
 [ content layout ]
@@ -371,20 +373,7 @@ article .panels:nth-child(1) {
 article .panels:nth-child(2) {
     grid-column: span 4;
     grid-row: span 4;
-
-    flex-direction: column;
 }
-article .panels:nth-child(3) {
-    grid-column: span 8;
-    grid-row: span 2;
-
-    flex-direction: column;
-}
-article .panels:nth-child(4) {
-    grid-column: span 4;
-    grid-row: span 2;
-}
-
 
 /* 
 
@@ -438,44 +427,97 @@ article .panels:nth-child(4) {
 
 */
 aside {
-    color: #FFF;
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: minmax(100px, auto);
-
-    height: 80%;
-    width: 80%;
-    position: relative;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    
 }
-aside .elmnts {
+aside .items {
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    position: relative;
+    border: var(--debugging);
+}
+aside .items:nth-child(1) {
+    grid-column: span 10;
+    grid-row: span 1;
+    flex-direction: column;
+}
+aside .items:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+aside .items:nth-child(3) {
+    grid-column: span 8;
+    grid-row: span 2;
+    flex-direction: column;
+}
+aside .items:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 2;
+    flex-direction: column;
+}
+aside .items:nth-child(5) {
+    grid-column: span 8;
+    grid-row: span 2;
+}
+aside .items:nth-child(6) {
+    grid-column: span 4;
+    grid-row: span 2;
+    flex-direction: column;
+}
+aside .items:nth-child(7) {
+    grid-column: span 12;
+    grid-row: span 1;
+    
+}
+aside button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    width: 180px;
+    background: transparent;
+    color: #FFF;
+    font-weight: bold;
+    border: 3px solid #FFF;
+}
+aside button i {
+    padding-right: 20px;
+    font-size: 1.54rem;
+}
+
+aside .objlist {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+aside .objlist li {
+    margin: auto;
+}
 
+aside .items p {
+    padding-left: 6%;
+    border: var(--wireframe);
+}
+aside .items h5 {
+    padding-left: 6%;
+    border: var(--wireframe);
+}
+aside .items .box {
     border: var(--debugging);
+    background: lightblue;
+    margin: auto;
+    height: 100%;
+    width: 100%;
 }
-aside .elmnts:nth-child(1) {
-    grid-column: span 12;
-    grid-row: span 4;
-}
-aside .elmnts:nth-child(2) {
-    grid-column: span 6;
-    grid-row: span 4;
-}
-aside .elmnts:nth-child(3) {
-    grid-column: span 6;
-    grid-row: span 4;
-}
-aside .elmnts:nth-child(4) {
-    grid-column: span 6;
-    grid-row: span 4;
-}
-aside .elmnts:nth-child(5) {
-    grid-column: span 12;
-    grid-row: span 2;
-}
-
 /*
 
 [ element propereties ]
@@ -516,7 +558,9 @@ a {font-size: 1.35rem;}
     text-align: center;
     text-decoration: underline;
 }
-
+footer span {
+    text-align: center;
+}
 /* 
 
 [ element propereties ]
@@ -531,10 +575,10 @@ a {font-size: 1.35rem;}
     c. image & backgrounds
 
 */
-#project_phkt {background-image: url(img/header.jpg);}
-#project_trvl {background-image: url(img/trvl.jpg);}
-#project_dash {background-image: url(img/dash.jpeg);}
-#project_disp {background-image: url(img/disp.jpeg);}
+#project_01 {background-image: url(img/header.jpg);}
+#project_02 {background-image: url(img/trvl.jpg);}
+#project_03 {background-image: url(img/dash.jpeg);}
+#project_04 {background-image: url(img/disp.jpeg);}
 
 
 /* header styles */
@@ -587,14 +631,100 @@ a {font-size: 1.35rem;}
 
 */
 @media screen and (max-width: 1099px) {
+    /* grid properties */
+    aside,
+    article,
+    .header,
+    .content,
+    .subcontent,
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+
+        text-align: center;
+    }
     
+    /* element properties */
+    .header .elmnts:nth-child(1),
+    .header .elmnts:nth-child(2),
+    .header .elmnts:nth-child(3) {
+        grid-column: span 6;
+        grid-row: span 1;
+        /* text-align: center; */
+    }
+
+    .content .elmnts:nth-child(1),
+    .content .elmnts:nth-child(2),
+    .content .elmnts:nth-child(3),
+    .content .elmnts:nth-child(4), 
+    .content .elmnts:nth-child(5) {
+        grid-column: span 6;
+        grid-row: span 1;
+        /* text-align: center; */
+    }
+
+    .subcontent .elmnts:nth-child(1),
+    .subcontent .elmnts:nth-child(2),
+    .subcontent .elmnts:nth-child(3),
+    .subcontent .elmnts:nth-child(4),
+    .subcontent .elmnts:nth-child(5) {
+        grid-column: span 6;
+        grid-row: span 1;
+        /* text-align: center; */
+    }
+    
+    .footer .elmnts:nth-child(1),
+    .footer .elmnts:nth-child(2),
+    .footer .elmnts:nth-child(8),
+    .footer .elmnts:nth-child(9) {
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+    
+    .footer .elmnts:nth-child(3),
+    .footer .elmnts:nth-child(5),
+    .footer .elmnts:nth-child(6) {
+        display: none;
+    }
+    .footer .elmnts:nth-child(4),
+    .footer .elmnts:nth-child(7) {
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+
+    article .panels:nth-child(1),
+    article .panels:nth-child(2),
+    article .panels:nth-child(4),
+    article .panels:nth-child(5) {
+        grid-column: span 6;
+        grid-row: span 3;
+    }
+    
+    aside .items:nth-child(1),
+    aside .items:nth-child(2),
+    aside .items:nth-child(3),
+    aside .items:nth-child(4),
+    aside .items:nth-child(5),
+    aside .items:nth-child(6) {
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+    aside .items:nth-child(4),
+    aside .items:nth-child(5) {
+        display: none;
+    }
+
+
    /* skills list properties */
     .mainlist .mainitems {
         list-style-type: none;
         padding: var(--spacing-sm);
     }
 
-
+    .mobile_hidden {
+        display: none;
+    }
  
 
     
@@ -631,15 +761,13 @@ a {font-size: 1.35rem;}
 
 }
 
-
-
-
 /* 
     [ media query ]
         b. mobile & tablet
 */
 @media screen and (max-width: 850px) {
     /* grid properties */
+    aside,
     article,
     .header,
     .content,
@@ -692,22 +820,44 @@ a {font-size: 1.35rem;}
     .footer .elmnts:nth-child(5),
     .footer .elmnts:nth-child(6),
     .footer .elmnts:nth-child(7) {
-        grid-column: span 1;
+        grid-column: span 3;
         grid-row: span 1;
     }
+    .footer .elmnts:nth-child(3) {display: none;}
+    /* .footer .elmnts:nth-child(4) {grid-column: 2;} */
 
     article .panels:nth-child(1),
     article .panels:nth-child(2),
     article .panels:nth-child(4),
     article .panels:nth-child(5) {
         grid-column: span 6;
-        grid-row: span 3;
+        grid-row: span 2;
     }
     
+    aside .items:nth-child(1),
+    aside .items:nth-child(2),
+    aside .items:nth-child(3),
+    aside .items:nth-child(4),
+    aside .items:nth-child(5),
+    aside .items:nth-child(6),
+    aside .items:nth-child(7) {
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+    
+    aside .items:nth-child(4),
+    aside .items:nth-child(5),
+    aside .items:nth-child(6) {
+        display: none;
+    }
+    aside .items:nth-child(6) {
+        flex-direction: column;
+    }
+
     .subcontent .elmnts:nth-child(3) {grid-row: 3;}
-    .footer .elmnts:nth-child(3) {display: none;}
-    .footer .elmnts:nth-child(4) {grid-column: 2;}
+    
     article .panels:nth-child(3) {display: none;}
+
 
     
     /* global properties */
@@ -726,6 +876,19 @@ a {font-size: 1.35rem;}
         letter-spacing: 1px;
         
     }
+    aside h2 {
+        font-size: 1.5rem;
+        padding: var(--spacing-sm);
+    }
+    .panels p {
+        font-size: 1.1rem;
+    }
+    .items h5 {
+        font-size: 1.3rem;
+    }
+    .items p {
+        font-size: 0.9rem;
+    }
     
     footer span {
         display: none;
@@ -735,6 +898,10 @@ a {font-size: 1.35rem;}
         list-style-type: none;
         padding: var(--spacing-sm);
         width: 60%;
+    }
+
+    .mobile_hidden {
+        display: none;
     }
 }
 
