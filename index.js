@@ -23,6 +23,7 @@ let modal_case03 = document.querySelector('#case_03');
 let modal_case04 = document.querySelector('#case_04');
 // position the project container with relative for attachment
 
+section_nav.style.display = 'flex';
 project_01.style.position = 'relative';
 project_02.style.position = 'relative';
 project_03.style.position = 'relative';
