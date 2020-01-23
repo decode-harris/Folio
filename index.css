@@ -131,7 +131,7 @@ html {
     gap: 100px 10px;
     
     margin: var(--spacing-md);
-    padding-top: 10vh;
+    
 }
 .content .elmnts {
     display: flex;
@@ -149,10 +149,13 @@ html {
     background-attachment: fixed;
 
     
+    
 }
 .content .elmnts:nth-child(1) {
     grid-column: span 12;
     grid-row: span 1;
+
+    
 }
 .content .elmnts:nth-child(2),
 .content .elmnts:nth-child(3), 
@@ -160,8 +163,9 @@ html {
 .content .elmnts:nth-child(5) {
     grid-column: span 12;
     grid-row: span 2;
-
+    margin: 5% 12%;
     min-height: 80vh;
+    
 }
 
 /* 
