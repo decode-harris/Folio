@@ -1,195 +1,307 @@
-const section_content = document.querySelector('.content');
-const section_body = document.querySelector('.body');
-const section_nav = document.querySelector('.nav');
+// selectors
+const body = document.querySelector('.body');
+const btn_connect = document.querySelector('.btn_connect');
 
-let closeBtn = document.querySelector('.closeBtn');
-let modalContainer = document.querySelector('.modal_container');
+// btn event : connect modal
+btn_connect.addEventListener('click', ()=> {
+    // body props
+    body.style.position = 'relative';
+    body.style.overflow = 'hidden';
+
+    // modal
+    let modal = document.createElement('section');
+    modal.style.position = 'absolute';
+    modal.style.top = '0';
+    modal.style.left = '0';
+    modal.style.height = '100%';
+    modal.style.width = '100%';
+    modal.style.background = 'rgba(0,0,0,0.8)';
+    
+    modal.style.display = 'flex';
+    modal.style.flexDirection = 'column';
+    modal.style.justifyContent = 'center';
+    modal.style.alignItems = 'center';
+    modal.style.textAlign = 'center';
+
+    modal.style.maxHeight = '100vh';
+    modal.style.maxWidth = '100vw';
+
+    // modal title
+    let title = document.createElement('h3');
+    title.innerHTML = 'Connect';
+    title.style.color = '#FFF';
+
+    // modal info
+    let info = document.createElement('p');
+    info.innerHTML = 'Pleasse feel free to contact me through any of the following options';
+    info.style.color = '#FFF';
+
+    // btn modal close
+    let btn_close = document.createElement('button');
+    btn_close.innerHTML = 'x';
+
+    btn_close.style.position = 'absolute';
+    btn_close.style.top = '10px';
+    btn_close.style.right = '10px';
+    
+    btn_close.style.width = '100%';
+    btn_close.style.maxWidth = '180px';
+    
+    btn_close.style.fontSize = '1.5rem';
+    btn_close.style.color = '#FFF';
+    btn_close.style.border = '2px solid #FFF';
+    btn_close.style.background = 'transparent';
+    btn_close.style.padding = '3%';
+
+    // btn_close.style.height = '40px';
+
+    // btn event : close
+    btn_close.addEventListener('click', ()=> {
+
+        if (modal.style.display == 'flex') {
+            modal.style.display = 'none';
+            body.style.overflow = 'auto';
+        } else {
+            modal.style.display = 'flex';
+            body.style.overflow = 'hidden';
+        }
+
+    });
+
+    
+    // append to modal
+    modal.appendChild(btn_close);
+    modal.appendChild(title);
+    modal.appendChild(info);
+    
+
+    // append to body
+    body.appendChild(modal);
+
+});
 
 
-// project button variables
-const btn_case01 = document.querySelector('#btn_case01');
-const btn_case02 = document.querySelector('#btn_case02');
-const btn_case03 = document.querySelector('#btn_case03');
-const btn_case04 = document.querySelector('#btn_case04');
-// project container variables
-const project_01 = document.querySelector('#project_01');
-const project_02 = document.querySelector('#project_02');
-const project_03 = document.querySelector('#project_03');
-const project_04 = document.querySelector('#project_04');
-// project modal variables
-let modal_case01 = document.querySelector('#case_01');
-let modal_case02 = document.querySelector('#case_02');
-let modal_case03 = document.querySelector('#case_03');
-let modal_case04 = document.querySelector('#case_04');
-// position the project container with relative for attachment
 
 
-project_01.style.position = 'relative';
-project_02.style.position = 'relative';
-project_03.style.position = 'relative';
-project_04.style.position = 'relative';
 
-modalContainer.style.display = 'none';
 
-// project button events
-btn_case01.addEventListener('click', () => {
-    if (modalContainer.style.display == 'none') {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const section_content = document.querySelector('.content');
+// const section_body = document.querySelector('.body');
+// const section_nav = document.querySelector('.nav');
+
+// let closeBtn = document.querySelector('.closeBtn');
+// let modalContainer = document.querySelector('.modal_container');
+
+
+// // project button variables
+// const btn_case01 = document.querySelector('#btn_case01');
+// const btn_case02 = document.querySelector('#btn_case02');
+// const btn_case03 = document.querySelector('#btn_case03');
+// const btn_case04 = document.querySelector('#btn_case04');
+// // project container variables
+// const project_01 = document.querySelector('#project_01');
+// const project_02 = document.querySelector('#project_02');
+// const project_03 = document.querySelector('#project_03');
+// const project_04 = document.querySelector('#project_04');
+// // project modal variables
+// let modal_case01 = document.querySelector('#case_01');
+// let modal_case02 = document.querySelector('#case_02');
+// let modal_case03 = document.querySelector('#case_03');
+// let modal_case04 = document.querySelector('#case_04');
+// // position the project container with relative for attachment
+
+
+// project_01.style.position = 'relative';
+// project_02.style.position = 'relative';
+// project_03.style.position = 'relative';
+// project_04.style.position = 'relative';
+
+// modalContainer.style.display = 'none';
+
+// // project button events
+// btn_case01.addEventListener('click', () => {
+//     if (modalContainer.style.display == 'none') {
        
-        properties_modalContainer();
-        properties_modalElements();
-        properties_hiddenNav();
+//         properties_modalContainer();
+//         properties_modalElements();
+//         properties_hiddenNav();
         
-        modal_case01.style.display = 'grid';
-        modal_case02.style.display = 'none';
-        modal_case03.style.display = 'none';
-        modal_case04.style.display = 'none';
+//         modal_case01.style.display = 'grid';
+//         modal_case02.style.display = 'none';
+//         modal_case03.style.display = 'none';
+//         modal_case04.style.display = 'none';
 
-        // attach modal elements to modal container
-        modalContainer.appendChild(modal_case01);
-        // attach modal container to project 01
-        project_01.appendChild(modalContainer);
-    } else {
-        modalContainer.style.display = 'none';
-    }
-});
-btn_case02.addEventListener('click', () => {
-    if (modalContainer.style.display == 'none') {
-        // modal properties
-        properties_modalContainer();
-        properties_modalElements();
-        properties_hiddenNav();
+//         // attach modal elements to modal container
+//         modalContainer.appendChild(modal_case01);
+//         // attach modal container to project 01
+//         project_01.appendChild(modalContainer);
+//     } else {
+//         modalContainer.style.display = 'none';
+//     }
+// });
+// btn_case02.addEventListener('click', () => {
+//     if (modalContainer.style.display == 'none') {
+//         // modal properties
+//         properties_modalContainer();
+//         properties_modalElements();
+//         properties_hiddenNav();
         
-        modal_case01.style.display = 'none';
-        modal_case02.style.display = 'grid';
-        modal_case03.style.display = 'none';
-        modal_case04.style.display = 'none';
+//         modal_case01.style.display = 'none';
+//         modal_case02.style.display = 'grid';
+//         modal_case03.style.display = 'none';
+//         modal_case04.style.display = 'none';
         
-        // attach modal elements to modal container
-        modalContainer.appendChild(modal_case02);
-        // attach modal container to project 02
-        project_02.appendChild(modalContainer);
-    } else {
-        modalContainer.style.display = 'none';
-    }
-});
-btn_case03.addEventListener('click', () => {
-    if (modalContainer.style.display == 'none') {
-        // modal properties
-        properties_modalContainer();
-        properties_modalElements();
-        properties_hiddenNav();
+//         // attach modal elements to modal container
+//         modalContainer.appendChild(modal_case02);
+//         // attach modal container to project 02
+//         project_02.appendChild(modalContainer);
+//     } else {
+//         modalContainer.style.display = 'none';
+//     }
+// });
+// btn_case03.addEventListener('click', () => {
+//     if (modalContainer.style.display == 'none') {
+//         // modal properties
+//         properties_modalContainer();
+//         properties_modalElements();
+//         properties_hiddenNav();
         
-        modal_case01.style.display = 'none';
-        modal_case02.style.display = 'none';
-        modal_case03.style.display = 'grid';
-        modal_case04.style.display = 'none';
+//         modal_case01.style.display = 'none';
+//         modal_case02.style.display = 'none';
+//         modal_case03.style.display = 'grid';
+//         modal_case04.style.display = 'none';
         
-        // attach modal elements to modal container
-        modalContainer.appendChild(modal_case03);
-        // attach modal container to project 03
-        project_03.appendChild(modalContainer);
-    } else {
-        modalContainer.style.display = 'none';
-    }
-});
-btn_case04.addEventListener('click', () => {
-    if (modalContainer.style.display == 'none') {
-        // modal properties
-        properties_modalContainer();
-        properties_modalElements();
-        properties_hiddenNav();
+//         // attach modal elements to modal container
+//         modalContainer.appendChild(modal_case03);
+//         // attach modal container to project 03
+//         project_03.appendChild(modalContainer);
+//     } else {
+//         modalContainer.style.display = 'none';
+//     }
+// });
+// btn_case04.addEventListener('click', () => {
+//     if (modalContainer.style.display == 'none') {
+//         // modal properties
+//         properties_modalContainer();
+//         properties_modalElements();
+//         properties_hiddenNav();
         
-        modal_case01.style.display = 'none';
-        modal_case02.style.display = 'none';
-        modal_case03.style.display = 'none';
-        modal_case04.style.display = 'grid';
+//         modal_case01.style.display = 'none';
+//         modal_case02.style.display = 'none';
+//         modal_case03.style.display = 'none';
+//         modal_case04.style.display = 'grid';
         
-        // attach modal elements to modal container
-        modalContainer.appendChild(modal_case04);
-        // attach modal container to project 04
-        project_04.appendChild(modalContainer);
-    } else {
-        modalContainer.style.display = 'none';
-    }
-});
+//         // attach modal elements to modal container
+//         modalContainer.appendChild(modal_case04);
+//         // attach modal container to project 04
+//         project_04.appendChild(modalContainer);
+//     } else {
+//         modalContainer.style.display = 'none';
+//     }
+// });
 
-// properties function for modal container
-function properties_modalContainer() {
-        modalContainer.style.background = 'rgba(0,0,0,0.85)';
+// // properties function for modal container
+// function properties_modalContainer() {
+//         modalContainer.style.background = 'rgba(0,0,0,0.85)';
 
-        modalContainer.style.display = 'flex';
-        modalContainer.style.flexDirection = 'column';
-        modalContainer.style.justifyContent = 'center';
-        modalContainer.style.alignItems = 'center';
+//         modalContainer.style.display = 'flex';
+//         modalContainer.style.flexDirection = 'column';
+//         modalContainer.style.justifyContent = 'center';
+//         modalContainer.style.alignItems = 'center';
         
-        modalContainer.style.position = 'absolute';
-        modalContainer.style.top = '0';
-        modalContainer.style.left = '0';
+//         modalContainer.style.position = 'absolute';
+//         modalContainer.style.top = '0';
+//         modalContainer.style.left = '0';
         
-        modalContainer.style.height = '100%';
-        modalContainer.style.width = '100%';
+//         modalContainer.style.height = '100%';
+//         modalContainer.style.width = '100%';
 
-        section_body.style.overflow = 'hidden';
-        section_content.style.overflow = 'hidden';
-};
+//         section_body.style.overflow = 'hidden';
+//         section_content.style.overflow = 'hidden';
+// };
 
-// propertis function for modal elements
-function properties_modalElements() {
-    if (modal_case01.style.display == 'grid') {
-        modal_case01.style.size = '100%';
-        modal_case01.style.textAlign = 'center';
-        modal_case01.style.padding = '2%';
-    }
-    else if(modal_case02.style.display == 'grid') {
-        modal_case02.style.size = '100%';
-        modal_case02style.textAlign = 'center';
-        modal_case02.style.padding = '2%';
-    }
-    else if(modal_case03.style.display == 'grid') {
-        modal_case03.style.size = '100%';
-        modal_case03style.textAlign = 'center';
-        modal_case03.style.padding = '2%';
-    }
-    else if(modal_case04.style.display == 'grid') {
-        modal_case04.style.size = '100%';
-        modal_case04style.textAlign = 'center';
-        modal_case04.style.padding = '2%';
-    }
-};
+// // propertis function for modal elements
+// function properties_modalElements() {
+//     if (modal_case01.style.display == 'grid') {
+//         modal_case01.style.size = '100%';
+//         modal_case01.style.textAlign = 'center';
+//         modal_case01.style.padding = '2%';
+//     }
+//     else if(modal_case02.style.display == 'grid') {
+//         modal_case02.style.size = '100%';
+//         modal_case02style.textAlign = 'center';
+//         modal_case02.style.padding = '2%';
+//     }
+//     else if(modal_case03.style.display == 'grid') {
+//         modal_case03.style.size = '100%';
+//         modal_case03style.textAlign = 'center';
+//         modal_case03.style.padding = '2%';
+//     }
+//     else if(modal_case04.style.display == 'grid') {
+//         modal_case04.style.size = '100%';
+//         modal_case04style.textAlign = 'center';
+//         modal_case04.style.padding = '2%';
+//     }
+// };
 
-// function to close modal and revert container settings
- function closeModal() {
-    if (modalContainer.style.display == 'flex') {
-        modalContainer.style.display = 'none';
+// // function to close modal and revert container settings
+//  function closeModal() {
+//     if (modalContainer.style.display == 'flex') {
+//         modalContainer.style.display = 'none';
 
-        project_01.style.overflow = 'auto';
-        section_body.style.overflow = 'auto';
-        section_nav.style.display = 'flex';
+//         project_01.style.overflow = 'auto';
+//         section_body.style.overflow = 'auto';
+//         section_nav.style.display = 'flex';
         
-        modal_case01.style.display = 'none';
-        modal_case02.style.display = 'none';
-        modal_case03.style.display = 'none';
-        modal_case04.style.display = 'none';
+//         modal_case01.style.display = 'none';
+//         modal_case02.style.display = 'none';
+//         modal_case03.style.display = 'none';
+//         modal_case04.style.display = 'none';
 
-        console.log('exit button has been clicked');
+//         console.log('exit button has been clicked');
      
         
-    } else {
-        section_body.style.overflow = 'hidden';
-        section_nav.style.display = 'none';
-        modalContainer.style.display = 'flex';
-    }
-  };
+//     } else {
+//         section_body.style.overflow = 'hidden';
+//         section_nav.style.display = 'none';
+//         modalContainer.style.display = 'flex';
+//     }
+//   };
 
 
-// hidden navigation on modal appearance
-function properties_hiddenNav() {
-    if (section_nav.style.display == 'flex') {
-        section_nav.style.display = 'none';
-    } else {
-        section_nav.style.display = 'flex';
-    }
-};
+// // hidden navigation on modal appearance
+// function properties_hiddenNav() {
+//     if (section_nav.style.display == 'flex') {
+//         section_nav.style.display = 'none';
+//     } else {
+//         section_nav.style.display = 'flex';
+//     }
+// };
 
 
 

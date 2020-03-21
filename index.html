@@ -9,21 +9,16 @@
     <title>Decode Harris</title>
 
     <link rel="stylesheet" href="index.css">
+    <script defer src="showcase.js"></script>
     <script defer src="index.js"></script>
+    
     <script src="https://kit.fontawesome.com/4dff4a55ad.js" crossorigin="anonymous"></script>
 </head>
 <body class="body" id="body">
     <!-- nav -->
-    <nav class="nav mobile_hidden">
+    <nav class="nav" style="display:none">
         <a href="#header">home</a>
-        <a href="#content">projects
-            <ul class="dropdown">
-                <li>Phuket Marriott</li>
-                <li>TRVL Web App</li>
-                <li>Dashboard Js</li>
-                <li>Display Template</li>
-            </ul>
-        </a>
+        <a href="#content">projects</a>
         <a href="#subcontent">skills</a>
         <a href="#footer">info</a>
     </nav>
@@ -31,55 +26,130 @@
     
     <!-- header -->
     <header class="header" id="header">
-        <!-- [ heading ] elmnts -->
+        <!-- elmnts -->
         <div class="elmnts">
-            <h1>Christopher Harris</h1>
+            <h2>Christopher Harris</h2>
             <p>Web Developer & Javascript Engineer</p>
         </div>
-        <!-- [ heading ] elmnts -->
-
-        <!-- [ links ] elmnts -->
         <div class="elmnts">
             <a href="https://github.com/decode-harris">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:decode.harris@gmail.com">
+            <a href="#projects">
+                <i class="fas fa-laptop-code"></i>
+            </a>
+            <a href="#" class="btn_connect">
                 <i class="far fa-envelope"></i>
             </a>
+            
         </div>
-        <!-- [ links ] elmnts -->
-
-        <!-- [ info ] elmnts -->
-        <div class="elmnts">
-            <p>
-                Hello, my name is Christopher Harris, a Melbourne based 
-                web developer and Javascript programmer. I enjoy developing
-                reusable code bases and modules aimed at making digital content
-                creation easier to refactor, debug, update & implement.
-            </p>
-            <p>
-                From a very young age I have always been interested & passionate about
-                technology & software, aswell as creating & gaming. With these specific
-                attributes and hobbies, I have been able to achieve success in multiple
-                languages & web based technologies.
-            </p>
-        </div>
-        <!-- [ info ] elmnts -->
+        <!-- elmnts -->
     </header>
     <!-- header -->
-    
-    <!-- content -->
-    <main class="content" id="content">
 
-        <!-- [ heading ] elmnts -->
-        <div class="elmnts">
-            <h2>Projects</h2>
+    <!-- content : information -->
+    <section class="content" id="content_information">
+            <!-- elmnts -->
+            <div class="elmnts">
+                <p>
+                    Good day,<br>
+                    my name is Christopher, a Melbourne based web developer
+                    and Javascript engineer.
+                    <br>
+                    I enjoy developing reusable code bases and modules aimed
+                    at making digital content creation easier to refactor,
+                    update & implement.
+                </p>
+            </div>
+            <!-- elmnts -->
+    </section>
+    <!-- content -->
+
+    <!-- projects -->
+    <section class="projects" id="projects">
+
+        <!-- elmnts -->
+        <div class="elmnts" >
+            <h3>Projects</h3>
             <p>Personal projects, live websites & Github repositories</p>
         </div>
-        <!-- [ heading ] elmnts -->
+        <div class="elmnts">
+            <!-- showcase -->
+            <section class="showcase">
+                <!-- sc -->
+                <article class="sc">
+                    <div class="elmnts">
+                        <h4>Title SC 1</h4>
+                        <img src="img/1.jpg" alt="test 1">
+                    </div>
+                    <div class="elmnts">
+                        <h5>Title Desktop 1</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                        </p>
+                    </div>
+                </article>
+                <article class="sc">
+                    <div class="elmnts">
+                        <h4>Title SC 2</h4>
+                        <img src="img/2.jpg" alt="test 2">
+                    </div>
+                    <div class="elmnts">
+                        <h5>Title Desktop 2</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                        </p>
+                    </div>
+                </article>
+                <article class="sc">
+                    <div class="elmnts">
+                        <h4>Title SC 3</h4>
+                        <img src="img/3.jpg" alt="test 3">
+                    </div>
+                    <div class="elmnts">
+                        <h5>Title Desktop 3</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                        </p>
+                    </div>
+                </article>
+                <article class="sc">
+                    <div class="elmnts">
+                        <h4>Title SC 4</h4>
+                        <img src="img/4.jpg" alt="test 4">
+                    </div>
+                    <div class="elmnts">
+                        <h5>Title Desktop 4</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
+                        </p>
+                    </div>
+                </article>
+                <!-- sc -->
+            </section>
+            <!-- showcase -->
+        </div>
+
+        <div class="elmnts">
+            <!-- sc buttons -->
+            <button class="btn_prev" onclick="prev_view(1)">Prev -</button>
+            <button class="btn_next" onclick="next_view(1)">Next +</button>
+            <!-- sc buttons -->
+        </div>
+
+    </section>
+    <!-- projects -->
 
         <!-- [ project 01 ] elmnts -->
-        <div class="elmnts" id="project_01">
+        <!-- <div class="elmnts" id="project_01">
             <article>
                 <div class="panels">
                     <h4>Phuket Marriott Resort</h4>
@@ -100,11 +170,11 @@
                     <button id="btn_case01" class="modalBtn">Overview</button>
                 </div>
             </article>
-        </div>
+        </div> -->
         <!-- [ project 01 ] elmnts -->
 
         <!-- [ project 02 ] elmnts -->
-        <div class="elmnts" id="project_02">
+        <!-- <div class="elmnts" id="project_02">
             <article>
                 <div class="panels">
                     <h4>Travel Highlights App</h4>
@@ -125,11 +195,11 @@
                     <button id="btn_case02" class="modalBtn">Overview</button>
                 </div>
             </article>
-        </div>
+        </div> -->
         <!-- [ project 02 ] elmnts -->
 
         <!-- [ project 03 ] elmnts -->
-        <div class="elmnts" id="project_03">
+        <!-- <div class="elmnts" id="project_03">
             <article>
                 <div class="panels">
                     <h4>Dashboard JS</h4>
@@ -151,11 +221,11 @@
                     <button id="btn_case03" class="modalBtn">Overview</button>
                 </div>
             </article>
-        </div>
+        </div> -->
         <!-- [ project 03 ] elmnts -->
 
         <!-- [ project 04 ] elmnts -->
-        <div class="elmnts" id="project_04">
+        <!-- <div class="elmnts" id="project_04">
             <article>
                 <div class="panels">
                     <h4>Display Folio</h4>
@@ -176,35 +246,59 @@
                     <button id="btn_case04" class="modalBtn">Overview</button>
                 </div>
             </article>
-        </div>
+        </div> -->
         <!-- [ project 04 ] elmnts -->
-    </main>
-    <!-- content -->
+    <!-- </main> -->
+    <!-- content : showcase -->
 
     <!-- skills -->
-    <section class="subcontent" id="subcontent">
-        <!-- [ skills ] elmnts -->
+    <section class="skills" id="content_skills">
+        <!-- elmnts -->
         <div class="elmnts">
-            <h2>Skills</h2>
+            <h3>Skills</h3>
             <p>Technology enthusiast comfortable with a wide range of software & tooling</p>
         </div>
-        <!-- [ skills ] elmnts -->
-
-        <!-- subcontent info -->
+        
         <div class="elmnts">
-            <p class="mobile_hidden">
-                Acquired a wide variety of software & development tooling, multiple
-                web and functional programming langauges, backend and databases manipulation,
-                hosting, debugging, documenting and design markup.
-            </p>
+            <!-- programming -->
+            <h4>Programming</h4>
+            <ul class="list">
+                <li class="mainitems">Frontend Technologies
+                    <ul class="sublist">
+                        <li class="subitems">HTML, CSS & Javascript</li>
+                        <li class="subitems">libraries, frameworks & preprocessors</li>
+                        <li class="subitems">Responsive Design & SEO Practices</li>
+                    </ul>
+                </li>
+                <li class="mainitems">Frameworks & Libraries
+                    <ul class="sublist">
+                        <li class="subitems">React Js, Next.Js</li>
+                        <li class="subitems">Gatsby JS, Flutter, Docker</li>
+                        <li class="subitems">CSS Components & Modules</li>
+                    </ul>
+                </li>
+                <li class="mainitems">Database & Backend
+                    <ul class="sublist">
+                        <li class="subitems">PHP, Python</li>
+                        <li class="subitems">Node.js</li>
+                        <li class="subitems">MS Access, mySQL</li>
+                    </ul>
+                </li>
+                <li class="mainitems">Hosting & CLI
+                    <ul class="sublist">
+                        <li class="subitems">Github, Netlify, Webhost</li>
+                        <li class="subitems">Gitbash, PowerShell, Git, Terminal</li>
+                        <li class="subitems">Bluehost, 000Web, GoDaddy, AWS</li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- programming -->
         </div>
-        <!-- subcontent info -->
-
-        <!-- [ software ] elmnts -->
         <div class="elmnts">
-            <h3>Software</h3>
-            
-            <ul class="mainlist">
+            <!-- software -->
+            <h4>Software</h4>
+            <ul class="list">
                 <li class="mainitems">Operating Systems
                     <ul class="sublist">
                         <li class="subitems">Windows OS & Dev Environment</li>
@@ -237,70 +331,25 @@
                     </ul>
                 </li>
             </ul>
+            <!-- software -->
         </div>
-        <!-- [ software ] elmnts -->
-
-        <!-- [ programming ] elmnts -->
         <div class="elmnts">
-            <h3>Programming</h3>
-
-            <ul class="mainlist">
-                <li class="mainitems">Frontend Technologies
-                    <ul class="sublist">
-                        <li class="subitems">HTML, CSS & Javascript</li>
-                        <li class="subitems">Web libraries, frameworks & preprocessors</li>
-                        <li class="subitems">Responsive Design & SEO Practices</li>
-                    </ul>
-                </li>
-                <li class="mainitems">Frameworks & Libraries
-                    <ul class="sublist">
-                        <li class="subitems">React Js, React Router, Next.Js</li>
-                        <li class="subitems">Gatsby JS, Flutter, Docker</li>
-                        <li class="subitems">Resuable Modules</li>
-                    </ul>
-                </li>
-                <li class="mainitems">Database & Backend
-                    <ul class="sublist">
-                        <li class="subitems">PHP Validation & Authentication</li>
-                        <li class="subitems">MySQL Database Implementation</li>
-                        <li class="subitems">MS Access, OracleDB, mySQL</li>
-                    </ul>
-                </li>
-                <li class="mainitems">Hosting & CLI
-                    <ul class="sublist">
-                        <li class="subitems">Github, Netlify, Webhost</li>
-                        <li class="subitems">Gitbash, PowerShell, Git, Terminal</li>
-                        <li class="subitems">Bluehost, 000Web, GoDaddy, AWS</li>
-                    </ul>
-                </li>
-                <!-- <li class="mainitems">CLI
-                    <ul class="sublist">
-                        <li class="subitems">PowerShell, Gitbash & Terminal</li>
-                        <li class="subitems">NPM Implementations</li>
-                        <li class="subitems">Directory Configurations & Debugging</li>
-                    </ul>
-                </li> -->
-            </ul>
-        </div>
-        <!-- [ programming ] elmnts -->
-        
-        <!-- [ personal ] elmnts -->
-        <div class="elmnts">
-            <h3>Personal</h3>
-            <ul class="mainlist">
+            <!-- personal -->
+            <h4>Personal</h4>
+            <ul class="list">
                 <li class="mainitems">Research & Learning
                     <ul class="sublist">
-                        <li class="subitems">Procuring information on latest practices</li>
-                        <li class="subitems">Advancing my knowledge with Javascript</li>
-                        <li class="subitems">Enjoyment out of learning something new</li>
+                        <li class="subitems">Informed on latest practices</li>
+                        <li class="subitems">Enthusiastic about Javascript</li>
+                        <li class="subitems">Research current trends</li>
                     </ul>
                 </li>
                 
                 <li class="mainitems">Passionate & Driven
                     <ul class="sublist">
-                        <li class="subitems">Been around technology & software my whole life</li>
-                        <li class="subitems">Researching about latest developments & updates</li>
-                        <li class="subitems">Always up to challenge myself</li>
+                        <li class="subitems">Technology obsessed</li>
+                        <li class="subitems">Enhanching new methodologies</li>
+                        <li class="subitems">Builds personal projects</li>
                     </ul>
                 </li>
             
@@ -314,14 +363,16 @@
                 
                 <li class="mainitems">Attitude & Personality
                     <ul class="sublist">
-                        <li class="subitems">Chill & laidback</li>
+                        <li class="subitems">Chill vibes & laidback attitude</li>
                         <li class="subitems">Non political & non judgemental</li>
                         <li class="subitems">Friendly & approachable</li>
                     </ul>
                 </li>
+
             </ul>
+            <!-- personal -->
         </div>
-        <!-- [ personal ] elmnts -->
+        <!-- elmnts -->
     </section>
     <!-- skills -->
 
@@ -329,301 +380,47 @@
     <footer class="footer" id="footer">
         <!-- elmnts -->
         <div class="elmnts">
-            <h2>Information</h2>
-            <p>Always down for a friendly chat about all things technology</p>
-        </div>
-        <div class="elmnts">
             <h3>Christopher Harris</h3>
             <p>Web Developer</p>
             <p>Melbourne, Aus</p>
+
+            <p>The developer thanks you kindly for visiting this page.</p>
         </div>
         <div class="elmnts">
             <div class="profile_img"></div>
         </div>
         <div class="elmnts">
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/decode-harris">Github</a>
+            
+            <a href="https://github.com/decode-harris">
+                <i class="fab fa-github"></i>
+                Github
+            </a>
             <span>See live projects, code repositories & development procedures</span>
         </div>
         <div class="elmnts">
-            <i class="fab fa-codepen"></i>
-            <a href="#">Codepen</a>
-            <span>View testing modules, creation & implemntation of new features</span>
-        </div>
-        <div class="elmnts">
-            <i class="far fa-envelope"></i>
-            <a href="mailto:decode.harris@gmail.com">Gmail</a>
+            <a href="mailto:decode.harris@gmail.com">
+                <i class="far fa-envelope"></i>
+                Gmail
+            </a>
             <span>Feel free to email if you feel like a chat</span>
         </div>
         <div class="elmnts">
-            <i class="fab fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/chris-harris-b9061711a/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/chris-harris-b9061711a/">
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+            </a>
             <span>View my linkedIn profile for relevent employment information</span>
         </div>
         <div class="elmnts">
-            <p>The developer thanks you kindly for visiting this page.</p>
-        </div>
-        <div class="elmnts">
-            <a href="#body">Back To Top</a>
+            <a href="#body">
+                <i class="fas fa-caret-square-up"></i>
+                Back To Top</a>
         </div>
         <!-- elmnts -->
     </footer>
     <!-- footer -->
 
-    <!-- modal container -->
-    <section class="modal_container">
-        <!-- modals -->
-        <aside id="case_01">
-            <!-- items -->
-            <div class="items">
-                <h2>Phuket Marriot Resort</h2>
-                <p>Project Case Study</p>
-            </div>
-            <div class="items">
-                <button class="closeBtn" onclick="closeModal()">close btn</button>
-            </div>
-            <div class="items">
-                <h5>Scope : </h5>
-                <p>
-                    Redesign & develop a prototype website for the Phuket Marriott
-                    Hotel & Resort, Thailand. Providing an updated code base, responsive
-                    design patterns, accessibility options & much more. 
-                </p>
-                <p class="mobile_hidden">
-                    Developed to showcase what this amazing resort has to offer in terms
-                    of facilities, services, restaurants & beach access. The current
-                    website doesnt do the resort justice with a bland interface jumbled 
-                    together. 
-                </p>
-            </div>
-            <div class="items">
-                <h5>Objectives :</h5>
-                
-                <ul class="objlist">
-                    <li>Clean & reusable code structuring</li>
-                    <li>Component level CSS styling</li>
-                    <li>Vanilla Javascript interactivity</li>
-                    <li>Responsive Design features</li>
-                    <li>Updated color scheme & images</li>
-                </ul>
-            </div>
-            <div class="items">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-            </div>
-            <div class="items">
-                <h5>Build Tools</h5>
-
-                <ul class="panlist">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JS</li>
-                    <li>PHP</li>
-                    <li>Netlify</li>
-                </ul>
-            </div>
-            <div class="items">
-                <button>
-                    <i class="fas fa-desktop"></i>
-                    Live Site
-                </button>
-
-                <button>
-                    <i class="fab fa-github"></i>
-                    Github Repo
-                </button>
-            </div>
-            <!-- items -->
-            
-        </aside>
-
-        <aside id="case_02">
-            <!-- items -->
-            <div class="items">
-                <h2>Travel Wev Application</h2>
-                <p>Project Case Study</p>
-            </div>
-            <div class="items">
-                <button class="closeBtn" onclick="closeModal()">close btn</button>
-            </div>
-            <div class="items">
-                <h5>Scope : </h5>
-                <p>
-                    Redesign & develop a prototype website for the Phuket Marriott
-                    Hotel & Resort, Thailand. Providing an updated code base, responsive
-                    design patterns, accessibility options & much more. 
-                </p>
-                <p class="mobile_hidden">
-                    Developed to showcase what this amazing resort has to offer in terms
-                    of facilities, services, restaurants & beach access. The current
-                    website doesnt do the resort justice with a bland interface jumbled 
-                    together. 
-                </p>
-                
-            </div>
-            <div class="items">
-                <h5>Objectives :</h5>
-                
-                <ul class="objlist">
-                    <li>Clean & reusable code structuring</li>
-                    <li>Component level CSS styling</li>
-                    <li>Vanilla Javascript interactivity</li>
-                    <li>Responsive Design features</li>
-                    <li>Updated color scheme & images</li>
-                </ul>
-            </div>
-            <div class="items">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-            </div>
-            <div class="items">
-                <h5>Build Tools</h5>
-
-                <ul class="panlist">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JS</li>
-                    <li>PHP</li>
-                    <li>Netlify</li>
-                </ul>
-            </div>
-            <div class="items">
-                <h5></h5>
-                <button>
-                    <i class="fas fa-desktop"></i>
-                    Live Site
-                </button>
-
-                <button>
-                    <i class="fab fa-github"></i>
-                    Github Repo
-                </button>
-            </div>
-            <!-- items -->
-        </aside>
-        <aside id="case_03">
-            <!-- items -->
-            <div class="items">
-                <h2>Dashboard Project Tracker</h2>
-                <p>Project Case Study</p>
-            </div>
-            <div class="items">
-                <button class="closeBtn" onclick="closeModal()">close btn</button>
-            </div>
-            <div class="items">
-                <h5>Scope : </b>
-                <p>
-                    Redesign & develop a prototype website for the Phuket Marriott
-                    Hotel & Resort, Thailand. Providing an updated code base, responsive
-                    design patterns, accessibility options & much more. 
-                    <span class="mobile_hidden">
-                    Developed to showcase what this amazing resort has to offer in terms
-                    of facilities, services, restaurants & beach access. The current
-                    website doesnt do the resort justice with a bland interface jumbled 
-                    together. 
-                    </span>
-                </p>
-            </div>
-            <div class="items">
-                <h5>Objectives :</h5>
-                
-                <ul class="objlist">
-                    <li>Clean & reusable code structuring</li>
-                    <li>Component level CSS styling</li>
-                    <li>Vanilla Javascript interactivity</li>
-                    <li>Responsive Design features</li>
-                    <li>Updated color scheme & images</li>
-                </ul>
-            </div>
-            <div class="items">
-                <h5>Build Tools</h5>
-
-                <ul class="panlist">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JS</li>
-                    <li>PHP</li>
-                    <li>Netlify</li>
-                </ul>
-            </div>
-            <div class="items">
-                <h5></h5>
-                <button>
-                    <i class="fas fa-desktop"></i>
-                    Live Site
-                </button>
-
-                <button>
-                    <i class="fab fa-github"></i>
-                    Github Repo
-                </button>
-            </div>
-            <!-- items -->
-        </aside>
-        <aside id="case_04">
-            <!-- items -->
-            <div class="items">
-                <h2>Display Content Template</h2>
-                <p>Project Case Study</p>
-            </div>
-            <div class="items">
-                <button class="closeBtn" onclick="closeModal()">close btn</button>
-            </div>
-            <div class="items">
-                <h5>Scope : </b>
-                <p>
-                    Redesign & develop a prototype website for the Phuket Marriott
-                    Hotel & Resort, Thailand. Providing an updated code base, responsive
-                    design patterns, accessibility options & much more. 
-                    <span class="mobile_hidden">
-                    Developed to showcase what this amazing resort has to offer in terms
-                    of facilities, services, restaurants & beach access. The current
-                    website doesnt do the resort justice with a bland interface jumbled 
-                    together. 
-                    </span>
-                </p>
-            </div>
-            <div class="items">
-                <h5>Objectives :</h5>
-                
-                <ul class="objlist">
-                    <li>Clean & reusable code structuring</li>
-                    <li>Component level CSS styling</li>
-                    <li>Vanilla Javascript interactivity</li>
-                    <li>Responsive Design features</li>
-                    <li>Updated color scheme & images</li>
-                </ul>
-            </div>
-            <div class="items">
-                <h5>Build Tools</h5>
-
-                <ul class="panlist">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JS</li>
-                    <li>PHP</li>
-                    <li>Netlify</li>
-                </ul>
-            </div>
-            <div class="items">
-                <h5></h5>
-                <button>
-                    <i class="fas fa-desktop"></i>
-                    Live Site
-                </button>
-
-                <button>
-                    <i class="fab fa-github"></i>
-                    Github Repo
-                </button>
-            </div>
-            <!-- items -->
-        </aside>
     
-    </section>
-    <!-- modal container -->
 
 </body>
 </html>
