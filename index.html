@@ -10,7 +10,9 @@
 
     <link rel="stylesheet" href="index.css">
     <script defer src="showcase.js"></script>
-    <script defer src="index.js"></script>
+    <script defer src="modal.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     
     <script src="https://kit.fontawesome.com/4dff4a55ad.js" crossorigin="anonymous"></script>
 </head>
@@ -28,8 +30,9 @@
     <header class="header" id="header">
         <!-- elmnts -->
         <div class="elmnts">
-            <h2>Christopher Harris</h2>
             <p>Web Developer & Javascript Engineer</p>
+            <h2>Christopher Harris</h2>
+            
         </div>
         <div class="elmnts">
             <a href="https://github.com/decode-harris">
@@ -148,111 +151,6 @@
     </section>
     <!-- projects -->
 
-        <!-- [ project 01 ] elmnts -->
-        <!-- <div class="elmnts" id="project_01">
-            <article>
-                <div class="panels">
-                    <h4>Phuket Marriott Resort</h4>
-                    <p>
-                        After staying at the Phuket Marriott Resort & Spa last year and 
-                        seeing how the webiste did not reflect the experience of the resort.
-                        I decided to create & develop a redesign for the website to reflect
-                        and share this amazing the experience.
-                    </p>
-                    <p class="mobile_hidden">
-                        The redesign enhances the previous design by adding responsive elements
-                        to the layout, providing a welcoming and information landing page, and
-                        showcasing the resorts world class facilities, services & suites.
-                    </p>
-                </div>
-                <div class="panels">
-                    <button>
-                        <a href="https://concept-marriott.live/">Live Site</a>
-                    </button>
-                    <button id="btn_case01" class="modalBtn">Overview</button>
-                </div>
-            </article>
-        </div> -->
-        <!-- [ project 01 ] elmnts -->
-
-        <!-- [ project 02 ] elmnts -->
-        <!-- <div class="elmnts" id="project_02">
-            <article>
-                <div class="panels">
-                    <h4>Travel Highlights App</h4>
-                    <p>
-                        When travelling its always a great idea to be able to save desintations,
-                        locations, places of interest & great restaurants. I developed a web application
-                        that enables users to create a travel highlights visual database.
-                    </p>
-                    <p class="mobile_hidden">
-                        The application can add a new country or city panel, with provides a heading and
-                        a tagline for the user to name. Add highlight images, favourite places & best
-                        deals for food. Best of all, you can leave a small quote about what you enjoyed
-                        about a particualr area for other travellers to view.
-                    </p>
-                </div>
-               <div class="panels">
-                    <button>Live Site</button>
-                    <button id="btn_case02" class="modalBtn">Overview</button>
-                </div>
-            </article>
-        </div> -->
-        <!-- [ project 02 ] elmnts -->
-
-        <!-- [ project 03 ] elmnts -->
-        <!-- <div class="elmnts" id="project_03">
-            <article>
-                <div class="panels">
-                    <h4>Dashboard JS</h4>
-                    <p>
-                        Developed a dashboard to help keep track of personal projects,
-                        research & documentation for learning materials, and providing
-                        an indepth overview and insight to planning for overseas travel.
-                    </p>
-                    <p class="mobile_hidden">
-                        The dashboard web application has a robust set of features,
-                        enabling users to have complete control over particular sections
-                        of the dashboard, hiding, removing & adding features at the users 
-                        request. And keeping track of unfinished tasks or debugging code
-                        bases.
-                    </p>
-                </div>
-                <div class="panels">
-                    <button>Live Site</button>
-                    <button id="btn_case03" class="modalBtn">Overview</button>
-                </div>
-            </article>
-        </div> -->
-        <!-- [ project 03 ] elmnts -->
-
-        <!-- [ project 04 ] elmnts -->
-        <!-- <div class="elmnts" id="project_04">
-            <article>
-                <div class="panels">
-                    <h4>Display Folio</h4>
-                    <p>
-                        A minimalistic online digital folio template for university students
-                        to help display work, projects & skills to potential employers. Started
-                        out as a personal portfolio for a friend, has now been turned into a templating
-                        system.
-                    </p>
-                    <p class="mobile_hidden">
-                        Add a display image or display content in the main container. Choose a title,
-                        description, create links and social connections, as well as previewing and 
-                        screen capturing technology.
-                    </p>
-                </div>
-                <div class="panels">
-                    <button>Live Site</button>
-                    <button id="btn_case04" class="modalBtn">Overview</button>
-                </div>
-            </article>
-        </div> -->
-        <!-- [ project 04 ] elmnts -->
-    <!-- </main> -->
-    <!-- content : showcase -->
-
     <!-- skills -->
     <section class="skills" id="content_skills">
         <!-- elmnts -->
@@ -262,118 +160,45 @@
         </div>
         
         <div class="elmnts">
-            <!-- programming -->
-            <h4>Programming</h4>
             <ul class="list">
-                <li class="mainitems">Frontend Technologies
-                    <ul class="sublist">
-                        <li class="subitems">HTML, CSS & Javascript</li>
-                        <li class="subitems">libraries, frameworks & preprocessors</li>
-                        <li class="subitems">Responsive Design & SEO Practices</li>
-                    </ul>
-                </li>
-                <li class="mainitems">Frameworks & Libraries
-                    <ul class="sublist">
-                        <li class="subitems">React Js, Next.Js</li>
-                        <li class="subitems">Gatsby JS, Flutter, Docker</li>
-                        <li class="subitems">CSS Components & Modules</li>
-                    </ul>
-                </li>
-                <li class="mainitems">Database & Backend
-                    <ul class="sublist">
-                        <li class="subitems">PHP, Python</li>
-                        <li class="subitems">Node.js</li>
-                        <li class="subitems">MS Access, mySQL</li>
-                    </ul>
-                </li>
-                <li class="mainitems">Hosting & CLI
-                    <ul class="sublist">
-                        <li class="subitems">Github, Netlify, Webhost</li>
-                        <li class="subitems">Gitbash, PowerShell, Git, Terminal</li>
-                        <li class="subitems">Bluehost, 000Web, GoDaddy, AWS</li>
-                    </ul>
-                </li>
+                <h4>Development</h4>
+                <li>HTML, CSS & PHP</li>
+                <li>Javascript & ES6 +</li>
+                <li>Frontend frameworks & CSS preprocessors</li>
+                <li>Responsive Design & SEO Practices</li>
+                <li>Github & Netlify</li>
+                <li>Google Analytics, Google Drive, Google API's</li>
+            </ul>
 
-            </ul>
-            <!-- programming -->
-        </div>
-        <div class="elmnts">
-            <!-- software -->
-            <h4>Software</h4>
-            <ul class="list">
-                <li class="mainitems">Operating Systems
-                    <ul class="sublist">
-                        <li class="subitems">Windows OS & Dev Environment</li>
-                        <li class="subitems">Mac OS</li>
-                        <li class="subitems">Linux OS</li>
-                    </ul>
-                </li>
-                
-                <li class="mainitems">Development Software
-                    <ul class="sublist">
-                        <li class="subitems">Visual Studio Code</li>
-                        <li class="subitems">Mozilla Developer Browser</li>
-                        <li class="subitems">Apache Local Host</li>
-                    </ul>
-                </li>
-                
-                <li class="mainitems">Design Tooling
-                    <ul class="sublist">
-                        <li class="subitems">Adobe Creative Suite</li>
-                        <li class="subitems">Microsoft Office</li>
-                        <li class="subitems">Figma</li>
-                    </ul>
-                </li>
-                
-                <li class="mainitems">Google Services
-                    <ul class="sublist">
-                        <li class="subitems">Google API's</li>
-                        <li class="subitems">Google Analytics</li>
-                        <li class="subitems">Google Drive</li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- software -->
-        </div>
-        <div class="elmnts">
-            <!-- personal -->
-            <h4>Personal</h4>
-            <ul class="list">
-                <li class="mainitems">Research & Learning
-                    <ul class="sublist">
-                        <li class="subitems">Informed on latest practices</li>
-                        <li class="subitems">Enthusiastic about Javascript</li>
-                        <li class="subitems">Research current trends</li>
-                    </ul>
-                </li>
-                
-                <li class="mainitems">Passionate & Driven
-                    <ul class="sublist">
-                        <li class="subitems">Technology obsessed</li>
-                        <li class="subitems">Enhanching new methodologies</li>
-                        <li class="subitems">Builds personal projects</li>
-                    </ul>
-                </li>
             
-                <li class="mainitems">Organisational Skills
-                    <ul class="sublist">
-                        <li class="subitems">Attention to detail</li>
-                        <li class="subitems">Design to specification</li>
-                        <li class="subitems">Documentation & testing</li>
-                    </ul>
-                </li>
-                
-                <li class="mainitems">Attitude & Personality
-                    <ul class="sublist">
-                        <li class="subitems">Chill vibes & laidback attitude</li>
-                        <li class="subitems">Non political & non judgemental</li>
-                        <li class="subitems">Friendly & approachable</li>
-                    </ul>
-                </li>
+          
+        </div>
+        <div class="elmnts">
+            <ul class="list">
+                <h4>Technical</h4>
+                <li>Research & development</li>
+                <li>Building, designing & deploying web apps</li>
+                <li>Adapting to latest trends & dev practices</li>
+                <li>PC builder & gamer since early age</li>
+                <li>Enthusiastic about Javascript</li>
+                <li>Design to specification, attention to detail</li>
+            </ul>
+        </div>
+
+        <div class="elmnts">
+            <ul class="list">
+                <h4>Software</h4>
+                <li>Visual Studio Code</li>
+                <li>Xampp, Apache, MySQL</li>
+                <li>Gitbash, Git & Github Desktop</li>
+                <li>Adobe XD</li>
+                <li>Microsoft Office 365</li>
+                <li>Windows OS & Mac OS Dev Environments</li>
 
             </ul>
-            <!-- personal -->
+
         </div>
+        
         <!-- elmnts -->
     </section>
     <!-- skills -->
@@ -386,10 +211,10 @@
             <p>Web Developer</p>
             <p>Melbourne, Aus</p>
 
-            <p>The developer thanks you kindly for visiting this page.</p>
+            
         </div>
         <div class="elmnts">
-            <div class="profile_img"></div>
+            <p>The developer thanks you kindly for visiting this page.</p>
         </div>
         <div class="elmnts">
             
@@ -397,26 +222,26 @@
                 <i class="fab fa-github"></i>
                 Github
             </a>
-            <span>See live projects, code repositories & development procedures</span>
+            <span>live projects & repositories</span>
         </div>
         <div class="elmnts">
             <a href="mailto:decode.harris@gmail.com">
                 <i class="far fa-envelope"></i>
                 Gmail
             </a>
-            <span>Feel free to email if you feel like a chat</span>
+            <span>Direct digital contact</span>
         </div>
         <div class="elmnts">
             <a href="https://www.linkedin.com/in/chris-harris-b9061711a/">
                 <i class="fab fa-linkedin"></i>
                 LinkedIn
             </a>
-            <span>View my linkedIn profile for relevent employment information</span>
+            <span>Relevant employment information</span>
         </div>
         <div class="elmnts">
             <a href="#body">
                 <i class="fas fa-caret-square-up"></i>
-                Back To Top</a>
+                Top</a>
         </div>
         <!-- elmnts -->
     </footer>

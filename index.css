@@ -6,15 +6,17 @@
 }
 /* css variables */
 :root {
-    --wireframe: 4px solid darkblue;
+    /* --wireframe: 4px solid darkblue;
     --debugging: 3px dotted darkred;
-    --component: 3px dotted darkgreen;
+    --component: 3px dotted darkgreen; */
 
     --sp-sm: 2%;
     --sp-md: 5%;
     --sp-lg: 10%;
 
     --clr-main: rgb(49, 10, 85);
+
+    --clr-main: rgb(41, 33, 75);
     --clr-alt: #000;
     --clr-sub: #FFF;
     
@@ -22,6 +24,8 @@
 /* css globals */
 html {
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
 }
 /* 
     table of content
@@ -44,7 +48,7 @@ html {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(25px, auto);
 
-    min-height: 40vh;
+    min-height: 50vh;
 
     background: var(--clr-main);
     color: var(--clr-sub);
@@ -67,10 +71,9 @@ html {
     grid-row: span 1;
 }
 .header h2 {
-    font-size: 2rem;
-    letter-spacing: 4px;
-    padding: var(--sp-md);
-    
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    padding-top:var(--sp-md);
 }
 .header a {
     font-size: 1.6rem;
@@ -78,10 +81,10 @@ html {
     margin: auto;
 }
 .header p {
-    padding-top: var(--sp-md);   
-    /* padding-left: var(--sp-md); */
-
-    font-size: 1.4rem;
+    padding: var(--sp-md);
+    
+    font-style: italic;
+    font-size: 1.3rem;
     letter-spacing: 2px;
     font-style: italic;
 }
@@ -93,7 +96,7 @@ html {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(25px, auto);
 
-    min-height: 60vh;
+    min-height: 50vh;
 }
 .content .elmnts {
     display: flex;
@@ -107,8 +110,8 @@ html {
 .content p {
     padding: var(--sp-lg);
     letter-spacing: 2px;
-    font-size: 1.25rem;
-    text-align: left;
+    font-size: 1.3rem;
+
 }
 
 /* 3 section : projects */
@@ -150,7 +153,7 @@ html {
     text-decoration: underline;
 }
 .projects p {
-    padding: var(--sp-md);
+    padding: var(--sp-sm);
     letter-spacing: 2px;
     font-size: 1.25rem;
     text-align: center;
@@ -164,17 +167,22 @@ html {
     font-size: 1.25rem;
     letter-spacing: 2px;
     padding: var(--sp-md);
+    max-width: 160px;
+    max-height: 45px;
 
     transition: 180ms all ease-in;
 
-    width: 100%;
-    max-width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%;
+    max-width: 180px; */
 
 }
 .projects .elmnts button:hover {
     background: var(--clr-sub);
     color: var(--clr-main);
-    font-weight: bold;
+    /* font-weight: bold; */
 
     transition: 200ms all ease;
 }
@@ -200,6 +208,8 @@ html {
     grid-auto-rows: minmax(25px, auto);
 
     text-align: center;
+
+    
 }
 .sc .elmnts {
     position: relative;
@@ -211,6 +221,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background: var(--clr-main);
 }
 .sc .elmnts:nth-child(1) {
     grid-column: span 6;
@@ -232,9 +244,9 @@ html {
     grid-row: span 2;
 }
 .sc img {
-    height: 100%;
-    width: 100%;
-    filter: opacity(0.6);
+    height: 80%;
+    width: 90%;
+    /* filter: opacity(0.6); */
 }
 .sc h4 {
     position: absolute;
@@ -337,8 +349,9 @@ html {
     color: var(--clr-sub);
 
     margin: var(--spacing-md);
-    min-height: 95vh;
-    padding-top: 10vh;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: var(--sp-sm);
 }
  .footer .elmnts {
     display: flex;
@@ -418,7 +431,7 @@ html {
         grid-template-columns: repeat(12, 1fr);
         grid-auto-rows: minmax(50px, auto);
     
-        min-height: 40vh;
+        min-height: 50vh;
     
         background: var(--clr-main);
         color: var(--clr-sub);
@@ -457,8 +470,83 @@ html {
         letter-spacing: 2px;
         font-style: italic;
     }
+    /* section : projects */
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(50px, auto);
     
+        min-height: 100vh;
+        min-width: 100vw;
+    
+        background: var(--clr-main);
+        /* background: var(--clr-sub); */
+        color: var(--clr-sub);
+    }
+    .projects .elmnts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: var(--wireframe);
+    
+    }
+    .projects .elmnts:nth-child(1) {
+        grid-column: span 12;
+        grid-row: span 1;
+    
+        flex-direction: column;
+    }
+    .projects .elmnts:nth-child(2) {
+        grid-column: span 12;
+        grid-row: span 6;
+    }
+    .projects .elmnts:nth-child(3) {
+        grid-column: span 12;
+        grid-row: span 1;
+    }
+    .projects h3 {
+        padding: var(--sp-sm);
+        font-size: 1.75rem;
+        letter-spacing: 4px;
+        text-decoration: underline;
+    }
+    .projects .elmnts button {
+        margin: var(--sp-md);
+        background: transparent;
+        border: 3px solid var(--clr-sub);
+        border-radius: 10px;
+        color: var(--clr-sub);
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+        padding: var(--sp-sm);
+        max-width: 160px;
+        max-height: 45px;
+    
+        transition: 180ms all ease-in;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%;
+        max-width: 180px; */
+    
+    }
+    .projects .elmnts button:hover {
+        background: var(--clr-sub);
+        color: var(--clr-main);
+        /* font-weight: bold; */
+    
+        transition: 200ms all ease;
+    }
+
     /* article : showcase */
+    .showcase {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    
+    }
     .sc {
         position: absolute;
         top: 0;
@@ -466,12 +554,14 @@ html {
         
         text-align: center;
     
-        height: 100%;
-        width: 100%;
+        min-height: 40vh;
+        
         
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-auto-rows: minmax(25px, auto);   
+        grid-auto-rows: minmax(50px, auto);   
+
+        border: var(--component);
     }
     .sc .elmnts {
         position: relative;
@@ -483,29 +573,58 @@ html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        border: var(--debugging);
+
+        background: var(--clr-main);
+        
     }
     .sc .elmnts:nth-child(1) {
-        grid-column: span 6;
-        grid-row: span 2;
+        grid-column: span 12;
+        grid-row: span 3;
         
     }
     .sc .elmnts:nth-child(2) {
-        grid-column: span 6;
+        grid-column: span 12;
         grid-row: span 2;
         display: flex;
     }
+
+    .sc {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(50px, auto);   
+    }
+    .sc .elmnts:nth-child(1) {
+        grid-column: span 8;
+        grid-row: span 4;
+    }
+    .sc .elmnts:nth-child(2) {
+        grid-column: span 4;
+        grid-row: span 4;
+    }
+    .sc img {
+        height: 80%;
+        width: 90%;
+    }
     .sc h5 {
-        color: var(--clr-alt);
+        /* color: var(--clr-alt); */
+        color: var(--clr-sub);
         font-size: 1.5rem;
         letter-spacing: 2px;
         padding-top: var(--sp-md);
+
     }
     .sc p {
-        color: var(--clr-alt);
+        /* color: var(--clr-alt); */
+        color: var(--clr-sub);
         text-align: center;
         
     }
-
+    /* .sc img {
+        height: 100%;
+        width: 95%;
+    } */
     /* section : skills */
     .skills {
         display: grid;
@@ -517,6 +636,11 @@ html {
     .skills .elmnts {
         height: 100%;
         width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         /* border: var(--component); */
     }
     .skills .elmnts:nth-child(1) {
@@ -541,24 +665,14 @@ html {
         width: 100%;
         height: 100%;
         padding-left: var(--sp-md);
+        margin: auto;
+        text-align: center;
         
-    }
-    .list .mainitems {
-        font-size: 1.3rem;
-        letter-spacing: 1px;
-        /* border: var(--wireframe); */
-    }
-    .list .subitems {
-        display: flex;
-        padding-left: var(--sp-md);
-
-        font-size: 1rem;
-        letter-spacing: 2px;
-        /* border: var(--debugging); */
     }
     .list li {
         padding: var(--sp-sm);
         list-style-type: none;
+        text-align: center;
     }
     
     /* footer : footer */
@@ -596,10 +710,36 @@ html {
     .footer .elmnts span {
         display: flex;
         padding: var(--sp-md);
-        font-size: 1.35rem;
+        font-size: 0.85rem;
         letter-spacing: 2px;
         font-style: italic;
+        text-align: center;
+    }
+    .footer i {
+        padding: var(--sp-md);
     }
 
     
+}
+
+
+/* media : ultrawide */
+@media screen and (min-width:1920px) {
+    .sc {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(50px, auto);   
+    }
+    .sc .elmnts:nth-child(1) {
+        grid-column: span 8;
+        grid-row: span 4;
+    }
+    .sc .elmnts:nth-child(2) {
+        grid-column: span 4;
+        grid-row: span 4;
+    }
+    .sc img {
+        height: 80%;
+        width: 90%;
+    }
 }
