@@ -121,7 +121,7 @@ html {
     grid-auto-rows: minmax(25px, auto);
 
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
 
     background: var(--clr-main);
     color: var(--clr-sub);
@@ -477,7 +477,7 @@ html {
         grid-auto-rows: minmax(50px, auto);
     
         min-height: 100vh;
-        min-width: 100vw;
+        width: 100vw;
     
         background: var(--clr-main);
         /* background: var(--clr-sub); */
@@ -487,6 +487,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
         border: var(--wireframe);
     
@@ -543,7 +544,7 @@ html {
     /* article : showcase */
     .showcase {
         position: relative;
-        width: 100%;
+        width: 100vw;
         height: 100%;
     
     }
@@ -555,6 +556,8 @@ html {
         text-align: center;
     
         min-height: 40vh;
+        width: 100%;
+
         
         
         display: grid;
@@ -579,7 +582,7 @@ html {
         background: var(--clr-main);
         
     }
-    .sc .elmnts:nth-child(1) {
+    /* .sc .elmnts:nth-child(1) {
         grid-column: span 12;
         grid-row: span 3;
         
@@ -588,13 +591,8 @@ html {
         grid-column: span 12;
         grid-row: span 2;
         display: flex;
-    }
+    } */
 
-    .sc {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-auto-rows: minmax(50px, auto);   
-    }
     .sc .elmnts:nth-child(1) {
         grid-column: span 8;
         grid-row: span 4;
@@ -602,10 +600,11 @@ html {
     .sc .elmnts:nth-child(2) {
         grid-column: span 4;
         grid-row: span 4;
+        display: flex;
     }
     .sc img {
         height: 80%;
-        width: 90%;
+        width: 70%;
     }
     .sc h5 {
         /* color: var(--clr-alt); */
@@ -619,6 +618,7 @@ html {
         /* color: var(--clr-alt); */
         color: var(--clr-sub);
         text-align: center;
+        padding: var(--sp-md);
         
     }
     /* .sc img {
@@ -665,7 +665,7 @@ html {
         width: 100%;
         height: 100%;
         padding-left: var(--sp-md);
-        margin: auto;
+        /* margin: auto; */
         text-align: center;
         
     }

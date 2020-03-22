@@ -9,12 +9,20 @@
     <title>Decode Harris</title>
 
     <link rel="stylesheet" href="index.css">
+    
+    <!-- scripts -->
+    <script defer src="gsap.js"></script>
     <script defer src="showcase.js"></script>
     <script defer src="modal.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/4dff4a55ad.js" crossorigin="anonymous"></script>
+    <!-- js scroll -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js" integrity="sha256-dGVGQNsKGrmq9K3SboxNKb22dHKCX4srU+4By9N3iLs=" crossorigin="anonymous"></script>
 </head>
 <body class="body" id="body">
     <!-- nav -->
@@ -29,12 +37,12 @@
     <!-- header -->
     <header class="header" id="header">
         <!-- elmnts -->
-        <div class="elmnts">
+        <div class="elmnts" id="title">
             <p>Web Developer & Javascript Engineer</p>
             <h2>Christopher Harris</h2>
             
         </div>
-        <div class="elmnts">
+        <div class="elmnts" id="nav">
             <a href="https://github.com/decode-harris">
                 <i class="fab fa-github"></i>
             </a>
@@ -53,7 +61,7 @@
     <!-- content : information -->
     <section class="content" id="content_information">
             <!-- elmnts -->
-            <div class="elmnts">
+            <div class="elmnts" id="info">
                 <p>
                     Good day,<br>
                     my name is Christopher, a Melbourne based web developer
@@ -69,16 +77,16 @@
     <!-- content -->
 
     <!-- projects -->
-    <section class="projects" id="projects">
+    <section class="projects">
 
         <!-- elmnts -->
         <div class="elmnts" >
-            <h3>Projects</h3>
-            <p>Personal projects, live websites & Github repositories</p>
+            <h3 id="projects">Projects</h3>
+            <p id="tagline">Personal projects, live websites & Github repositories</p>
         </div>
         <div class="elmnts">
             <!-- showcase -->
-            <section class="showcase">
+            <section class="showcase" id="showcase">
                 <!-- sc -->
                 <article class="sc">
                     <div class="elmnts">
@@ -152,7 +160,7 @@
     <!-- projects -->
 
     <!-- skills -->
-    <section class="skills" id="content_skills">
+    <section class="skills" id="skills">
         <!-- elmnts -->
         <div class="elmnts">
             <h3>Skills</h3>
