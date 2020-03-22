@@ -1,7 +1,7 @@
 // GSAP timeline animations
 gsap.timeline()
     // header props
-    .from('#header', {duration: 1.2, opacity:0})
+    .from('#header', {duration: 0.85, opacity:0})
     .from('#header h2', {opacity:0, scale:0, duration: 0.7, ease:'back'})
     .from('#header .tagline', {opacity:0, scale:0, duration: 0.7, ease:'back'})
     // nav props
@@ -18,7 +18,7 @@ gsap.timeline()
     .from('#skills h3', {xPercent:100, opacity:0, duration: 1, ease:'back', delay: 1})
     .from('#skills .tagline', {xPercent:-100, opacity:0, duration: 1, ease:'back'}, '-=1')
     // list props
-    .from('#skills ul', {yPercent:100, stagger:0.7, opacity:0, duration: 1, ease:'back', delay:'0.9'})
+    .from('#skills ul', {yPercent:100, stagger:0.4, opacity:0, duration: 1, ease:'back', delay:'0.9'})
     // footer props
     .from('#footer', {duration: 0.85, opacity:0})
     .from('#footer h3', {opacity:0, scale:0, duration: 0.7, ease:'back'})
