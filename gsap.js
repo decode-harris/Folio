@@ -23,7 +23,8 @@ gsap.timeline()
     .from('#footer', {duration: 0.85, opacity:0})
     .from('#footer h3', {xPercent:100, opacity:0, duration: 1, ease:'back'})
     .from('#footer .tagline', {xPercent:-100, opacity:0, duration: 1, ease:'back'}, '-=1')
-    .from('#footer a', {duration: 1, yPercent:10, opacity:0, stagger: 0.5, ease:'back'})
+
+    .from('#footer a', {duration: 1, yPercent:50, opacity:0, stagger: 0.5, ease:'back'})
 
 
     
