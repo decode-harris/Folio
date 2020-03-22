@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6 {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(25px, auto);
 
-    height: 100vh;
+    min-height: 100vh;
     min-height: 100vh;
 
     background: var(--clr-main);
@@ -138,6 +138,7 @@ h1,h2,h3,h4,h5,h6 {
     border: 4px solid #000;
     min-height: 100px;
     min-width: 100px;
+    padding: var(--sp-sm);
 }
 .content .elmnts:nth-child(1) {
     grid-column: span 6;
@@ -163,13 +164,18 @@ h1,h2,h3,h4,h5,h6 {
 
     border: var(--debugging);
 }
-.content p {
+.content .tagline {
     padding: var(--sp-sm);
     letter-spacing: 2px;
     font-size: 1.3rem;
 
     border: var(--debugging);
     text-align: center;
+}
+.content p {
+    font-size: 1.25rem;
+    text-align: center;
+    padding-bottom: var(--sp-md);
 
 }
 .content i {
