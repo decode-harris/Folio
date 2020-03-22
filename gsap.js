@@ -7,9 +7,9 @@ gsap.timeline()
     // info props
     .from('#info',{x:-200, stagger:0.1, opacity:0, duration: 0.5, ease:'back'})
     // project props
-    .from('#projects', {x:200, opacity:0, duration: 1, ease:'back', delay: 1.7})
+    .from('#projects', {x:200, opacity:0, duration: 1, ease:'back', delay: 2.1})
     .from('#tagline', {x:-200, opacity:0, duration: 1, ease:'back'}, '-=1')
-    .from('#showcase', {y:200, opacity:0, duration: 1, ease:'back'}, '-=1')
+    .from('#showcase', {y:200, opacity:0, duration: 1.8, ease:'back'}, '-=0.8')
    
     // skills props
     .from('#skills ul', {x:-200, stagger:0.7, opacity:0, duration: 1, ease:'back', delay: 2});
