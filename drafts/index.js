@@ -1,3 +1,53 @@
+const link_git = document.querySelector('#link_git');
+const name_link = document.querySelector('.name_git');
+
+link_git.addEventListener('mouseover', ()=>{
+    link_git.style.transition = '200ms all ease';
+    link_git.style.letterSpacing = '2px';
+    
+    if (name_link.innerHTML == '') {
+        
+        name_link.innerHTML = ' Github';
+        
+    } else {
+       name_link.innerHTML = '';
+    }
+    
+});
+link_git.addEventListener('mouseleave', ()=> {
+    if (name_link.innerHTML = ' Github') {
+        name_link.innerHTML = '';
+    } else {
+        name_link.innerHTML = ' Github';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // GSAP timeline animations
 // gsap.timeline()
 //     // header props

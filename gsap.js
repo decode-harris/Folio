@@ -4,21 +4,31 @@ gsap.timeline()
     .from('#header', {duration: 0.85, opacity:0})
     .from('#header h2', {opacity:0, scale:0, duration: 0.7, ease:'back'})
     .from('#header .tagline', {opacity:0, scale:0, duration: 0.7, ease:'back'})
-    // // nav props
     .from('#nav a', {y:200, stagger:0.2, opacity:0, duration: 0.7, ease:'back'})
-    // // info props
     .from('#info',{xPercent:100, stagger:0.1, opacity:0, duration: 0.9, ease:'back'})
-    // // projects props
+
+    // specs props
+    .from('#specs', {duration: 0.85, opacity:0})
+    .from('#specs h3', {xPercent:-100, opacity:0, duration: 1, ease:'back'})
+    .from('#specs .tagline', {xPercent:100, opacity:0, duration: 1, ease:'back'}, '-=1')
+    .from('#specs .box', {duration: 0.85, stagger: 0.3, opacity:0})
+
+
+    // projects props
     .from('#projects', {opacity:0, duration: 1})
     .from('#projects h3', {xPercent:-100, opacity:0, duration: 1, ease:'back'})
     .from('#projects .tagline', {xPercent:100, opacity:0, duration: 1, ease:'back'}, '-=1')
-    // // showcase props
+    
+    // showcase props
     .from('#showcase', {yPercent:50, opacity:0, duration: 1, ease:'back'}, '-=1')
-    // // skills props
+    
+    // skills props
     .from('#skills h3', {xPercent:100, opacity:0, duration: 1, ease:'back', delay: 1})
     .from('#skills .tagline', {xPercent:-100, opacity:0, duration: 1, ease:'back'}, '-=1')
-    // // list props
+    
+    // list props
     .from('#skills ul', {yPercent:100, stagger:0.4, opacity:0, duration: 1, ease:'back', delay:'0.9'})
+    
     // footer props
     .from('#footer', {duration: 0.85, opacity:0})
     .from('#footer h3', {xPercent:100, opacity:0, duration: 1, ease:'back'})
