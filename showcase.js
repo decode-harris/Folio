@@ -1,4 +1,3 @@
-
 // showcase selector
 const showcase = document.querySelector('.showcase');
 // console.log(showcase);

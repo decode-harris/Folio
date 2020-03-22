@@ -55,12 +55,16 @@ h1,h2,h3,h4,h5,h6 {
 
     background: var(--clr-main);
     color: var(--clr-sub);
+
+    border: var(--component);
 }
 .header .elmnts {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    border: var(--debugging);
  
     
 }
@@ -77,11 +81,15 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 2.2rem;
     letter-spacing: 2px;
     padding-top:var(--sp-md);
+
+    border: var(--debugging);
 }
 .header a {
     font-size: 1.6rem;
     color: var(--clr-sub);
     margin: auto;
+
+    border: var(--debugging);
 }
 .header p {
     padding: var(--sp-md);
@@ -90,6 +98,8 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1.3rem;
     letter-spacing: 2px;
     font-style: italic;
+
+    border: var(--debugging);
 }
 
 
@@ -101,6 +111,8 @@ h1,h2,h3,h4,h5,h6 {
 
     min-height: 50vh;
     width: 100%;
+
+    border: var(--component);
     
 }
 .content .elmnts {
@@ -108,6 +120,8 @@ h1,h2,h3,h4,h5,h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border: var(--debugging);
 }
 .content .elmnts:nth-child(1) {
     grid-column: span 6;
@@ -116,6 +130,8 @@ h1,h2,h3,h4,h5,h6 {
     padding: var(--sp-lg);
     letter-spacing: 2px;
     font-size: 1.3rem;
+
+    border: var(--debugging);
 
 }
 
@@ -130,11 +146,15 @@ h1,h2,h3,h4,h5,h6 {
 
     background: var(--clr-main);
     color: var(--clr-sub);
+
+    border: var(--component);
 }
 .projects .elmnts {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: var(--debugging);
 
 }
 .projects .elmnts:nth-child(1) {
@@ -156,12 +176,16 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1.75rem;
     letter-spacing: 4px;
     text-decoration: underline;
+
+    border: var(--debugging);
 }
 .projects p {
     padding: var(--sp-sm);
     letter-spacing: 2px;
     font-size: 1.25rem;
     text-align: center;
+
+    border: var(--debugging);
 }
 .projects .elmnts button {
     margin: auto;
@@ -181,6 +205,8 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: center;
     align-items: center;
 
+    
+
 }
 .projects .elmnts button:hover {
     background: var(--clr-sub);
@@ -196,7 +222,8 @@ h1,h2,h3,h4,h5,h6 {
     height: 100%;
 
     
-
+    
+    
 }
 .sc {
     position: absolute;
@@ -211,6 +238,8 @@ h1,h2,h3,h4,h5,h6 {
     grid-auto-rows: minmax(25px, auto);
 
     text-align: center;
+
+    border: var(--component);
 }
 .sc .elmnts {
     position: relative;
@@ -223,6 +252,7 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
 
     background: var(--clr-main);
+    border: var(--debugging);
 }
 .sc .elmnts:nth-child(1) {
     grid-column: span 6;
@@ -329,13 +359,16 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    /* text-align: center; */
+    
 }
 .list li {
     list-style-type: none;
 }
-
+.list li:nth-child(7) {
+    padding-bottom: var(--sp-lg);
+    /* background: red;
+    border: var(--wireframe); */
+}
 /* 7 footer : footer */
 .footer {
     display: grid;
@@ -347,9 +380,9 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--clr-sub);
 
     margin: var(--spacing-md);
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
-    padding-top: var(--sp-sm);
+    /* padding-top: var(--sp-sm); */
 }
  .footer .elmnts {
     display: flex;
@@ -429,7 +462,7 @@ h1,h2,h3,h4,h5,h6 {
         grid-template-columns: repeat(12, 1fr);
         grid-auto-rows: minmax(50px, auto);
     
-        min-height: 50vh;
+        min-height: 70vh;
     
         background: var(--clr-main);
         color: var(--clr-sub);
@@ -469,6 +502,11 @@ h1,h2,h3,h4,h5,h6 {
         letter-spacing: 2px;
         font-style: italic;
     }
+    /* section : content */
+    .content {
+        height: 30vh
+    }
+
     /* section : projects */
     .projects {
         display: grid;
@@ -639,6 +677,7 @@ h1,h2,h3,h4,h5,h6 {
         grid-template-columns: repeat(12, 1fr);
         grid-auto-rows: minmax(50px, auto);
 
+        min-height: 50vh;
         width: 100%;
     }
     .skills .elmnts {
@@ -673,14 +712,17 @@ h1,h2,h3,h4,h5,h6 {
         width: 100%;
         height: 100%;
         padding-left: var(--sp-md);
-        /* margin: auto; */
         text-align: center;
+
+        border: var(--wireframe);
         
     }
     .list li {
         padding: var(--sp-sm);
         list-style-type: none;
         text-align: center;
+
+        border: var(--debugging);
     }
     
     /* footer : footer */
@@ -688,6 +730,8 @@ h1,h2,h3,h4,h5,h6 {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-auto-rows: minmax(50px, auto);
+        min-height: 100vh;
+        width: 100%;
     }
     .footer .elmnts:nth-child(1) {
         grid-column: span 12;
