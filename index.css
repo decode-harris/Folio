@@ -535,11 +535,11 @@ footer .elmnts:nth-child(1) {
     grid-row: span 1;
 }
 footer .elmnts:nth-child(2) {
-    grid-column: span 2;
+    grid-column: span 6;
     grid-row: span 1;
 }
 footer .elmnts:nth-child(3) {
-    grid-column: span 4;
+    grid-column: span 6;
     grid-row: span 1;
 }
 footer h3 {
@@ -671,9 +671,6 @@ footer i {
         gap: 10px 15px;
         min-height: 100vh;
         padding: 2rem;
-    }
-    #gallery img {
-        max-height: 35vh;
     }
     #gallery .elmnts {
         height: 100%;
