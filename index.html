@@ -3,197 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="C D Harris">
+    <meta name="author" content="Christopher Harris">
+    <meta name="developer" content="Christopher Harris">
+    <title>Christopher Harris | Web Developer | Digital Folio</title>
 
-    <title>Decode Harris</title>
-
-    <link rel="stylesheet" href="index.css">
-    
-    <!-- scripts -->
-    <script defer src="gsap.js"></script>
-    <script defer src="showcase.js"></script>
-    <!-- <script defer src="modal.js"></script> -->
-
-    <!-- <script defer src="drafts/index.js"></script> -->
-    
-    <!-- google fonts -->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Catamaran:800|Poppins&display=swap" rel="stylesheet">
-    <!-- font awesome -->
+    <!-- js -->
+    <script defer src="modal.js"></script>
+    <script defer src="nav.js"></script>
+    
+    <!-- libs -->
     <script src="https://kit.fontawesome.com/4dff4a55ad.js" crossorigin="anonymous"></script>
-    <!-- js scroll -->
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-    <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js" integrity="sha256-dGVGQNsKGrmq9K3SboxNKb22dHKCX4srU+4By9N3iLs=" crossorigin="anonymous"></script>
 </head>
-<body class="body" id="body">
+<body id="body" onload="navproperties()">
+    <!-- nav -->
+    <nav id="nav">
+        <!-- elmnts -->
+        <div class="elmnts" id="nav_btn">
+            <!-- navbtn -->
+            <button id="navbtn">
+                <i class="fas fa-bars" id="navbtn_icon"></i>
+            </button>
+            <!-- navbtn -->
+        </div>
+        <div class="elmnts" id="nav_title">
+            <!-- title | icon -->
+            <h5>
+                <i class="fas fa-cube"></i>
+                Hypnotyx Dev
+            </h5>
+            <!-- title | icon -->
+        </div>
+        <div class="elmnts" id="nav_ul">
+            <!-- navlist -->
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#profile">profile</a></li>
+                <li><a href="#main">work</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <!-- navlist -->
+        </div>
+        <!-- elmnts -->
+    </nav>
+    <!-- nav -->
+
     <!-- header -->
-    <header class="header" id="header">
+    <header id="header">
         <!-- elmnts -->
         <div class="elmnts">
-            <p class="tagline">Web Developer & Javascript Engineer</p>
-            <h2>Christopher Harris</h2>
+            <h1>Mr Christopher Harris</h1>
+            <h5>Web Developer & IT Professional</h5>
         </div>
-        <div class="elmnts" id="nav">
-            <!-- <a href="https://github.com/decode-harris" id="link_git">
-                <i class="fab fa-github"></i>
-                <span class="name_git"></span>
-            </a> -->
-            <a href="#projects">
-                <i class="fas fa-laptop-code"></i>
-            </a>
-            <a href="#footer" >
-                <i class="far fa-envelope"></i>
-            </a>
+        <div class="elmnts">
+            <!-- img placeholder -->
+            <div class="box"></div>
+            <!-- img placeholder -->
         </div>
-        <div class="elmnts" id="info">
+        <div class="elmnts">
             <p>
-                Good day,<br>
-                my name is Christopher, a Melbourne based web developer
-                and Javascript engineer.
-                <br>
-                <!-- I enjoy developing reusable code bases and modules aimed
-                at making digital content creation easier to refactor,
-                update & implement. -->
+                Greetings, <br>
+                my name is Christopher Harris, an enthusiastic website developer,
+                IT Professional & PC hardware specialist.
             </p>
         </div>
         <!-- elmnts -->
     </header>
     <!-- header -->
 
-    <!-- modal btn for header -->
-    <!-- class="btn_connect" -->
+    <!-- profile -->
+    <section id="profile">
 
-    <!-- content : information -->
-    <section class="content" id="specs">
-            <!-- elmnts -->
-            <div class="elmnts">
-                <h3>Specialization</h3>
-                <p class="tagline">Advanced knowledge of ICT systems & coding principals</p>
-            </div>
-            <!-- spec 1 -->
-            <div class="elmnts">
-                <div class="box">
-                    <i class="fas fa-database"></i>
-                </div>
-                <h5>Web Development</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, dolore.</p>
-            </div>
-            <!-- spec 2 -->
-            <div class="elmnts">
-                <div class="box">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <h5>Javascript Animation</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ipsum.</p>
-            </div>
-            <!-- spec 3 -->
-            <div class="elmnts">
-                <div class="box">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <h5>Data & Dashboards</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ipsum.</p>
-            </div>
-            
-            <!-- <div class="elmnts"></div> -->
-            <!-- <div class="elmnts"></div> -->
-            <!-- elmnts -->
-    </section>
-    <!-- content -->
-
-    <!-- projects -->
-    <section class="projects" id="projects">
-        <!-- elmnts -->
-        <div class="elmnts" >
-            <h3>Projects</h3>
-            <p class="tagline">Personal projects, live websites & Github repositories</p>
-        </div>
-        <div class="elmnts">
-            <!-- showcase -->
-            <section class="showcase" id="showcase">
-                <!-- sc -->
-                <article class="sc">
-                    <div class="elmnts">
-                        <h4>Title SC 1</h4>
-                        <img src="img/1.jpg" alt="test 1">
-                    </div>
-                    <div class="elmnts">
-                        <h5>Display & Showcase Web</h5>
-                        <p>
-                            Providing a minimalistic & sleek styled webpage
-                            brochure that displays or showcase's a users
-                            products & services
-                            
-                        </p>
-                    </div>
-                </article>
-                <article class="sc">
-                    <div class="elmnts">
-                        <h4>Title SC 2</h4>
-                        <img src="img/2.jpg" alt="test 2">
-                    </div>
-                    <div class="elmnts">
-                        <h5>Travel Card App</h5>
-                        <p>
-                            Helping to share those captured & inspired travel
-                            moments with a digital post card application
-                        </p>
-                    </div>
-                </article>
-                <article class="sc">
-                    <div class="elmnts">
-                        <h4>Title SC 3</h4>
-                        <img src="img/3.jpg" alt="test 3">
-                    </div>
-                    <div class="elmnts">
-                        <h5>Dashboard Analytics Web</h5>
-                        <p>
-                            An administrator's dashboard & overview system,
-                            tracking current objetives, create new tasks,
-                            live share with co-workers
-                            
-                        </p>
-                    </div>
-                </article>
-                <article class="sc">
-                    <div class="elmnts">
-                        <h4>Pending</h4>
-                        <img src="img/4.jpg" alt="test 4">
-                    </div>
-                    <div class="elmnts">
-                        <h5>Title Desktop 4</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, molestias.
-                        </p>
-                    </div>
-                </article>
-                <!-- sc -->
-            </section>
-            <!-- showcase -->
-        </div>
-
-        <div class="elmnts">
-            <!-- sc buttons -->
-            <button class="btn_prev" onclick="prev_view(1)">Prev -</button>
-            <button class="btn_next" onclick="next_view(1)">Next +</button>
-            <!-- sc buttons -->
-        </div>
-
-    </section>
-    <!-- projects -->
-
-    <!-- skills -->
-    <section class="skills" id="skills">
         <!-- elmnts -->
         <div class="elmnts">
-            <h3>Skills</h3>
-            <p class="tagline">Technology enthusiast comfortable with a wide range of software & tooling</p>
+            <h3>Skill Profile</h3>
+            <p>Technology enthusiast comfortable with a wide range of software & tooling</p>
         </div>
         
         <div class="elmnts">
+            <!-- list -->
             <ul class="list">
-                <h5>Development</h5>
+                <h5>
+                    <i class="fab fa-codepen"></i>
+                    Development
+                </h5>
                 <li>HTML, CSS & PHP</li>
                 <li>Javascript & ES6 +</li>
                 <li>Frontend frameworks & CSS preprocessors</li>
@@ -201,13 +98,15 @@
                 <li>Github & Netlify</li>
                 <li>Google Analytics, Google Drive, Google API's</li>
             </ul>
-
-            
-          
+            <!-- list -->
         </div>
         <div class="elmnts">
+            <!-- list -->
             <ul class="list">
-                <h5>Technical</h5>
+                <h5>
+                    <i class="fas fa-cogs"></i>
+                    Technical
+                </h5>
                 <li>Research & development</li>
                 <li>Building, designing & deploying web apps</li>
                 <li>Adapting to latest trends & dev practices</li>
@@ -215,75 +114,262 @@
                 <li>Enthusiastic about Javascript</li>
                 <li>Design to specification, attention to detail</li>
             </ul>
+            <!-- list -->
         </div>
 
         <div class="elmnts">
+            <!-- list -->
             <ul class="list">
-                <h5>Software</h5>
+                <h5>
+                    <i class="fas fa-desktop"></i>
+                    Software
+                </h5>
                 <li>Visual Studio Code</li>
                 <li>Xampp, Apache, MySQL</li>
                 <li>Gitbash, Git & Github Desktop</li>
                 <li>Adobe XD</li>
                 <li>Microsoft Office 365</li>
                 <li>Windows OS & Mac OS Dev Environments</li>
-
             </ul>
-
+            <!-- list -->
         </div>
-        
         <!-- elmnts -->
     </section>
-    <!-- skills -->
+    <!-- profile -->
+
+    <!-- main -->
+    <main id="main">
+        <!-- elmnts -->
+        <div class="elmnts">
+            <!-- section title -->
+            <h3>Dev Projects</h3>
+            <p>Personal projects, automation applications, dashboard monitoring software</p>
+            <!-- section title -->    
+        </div>
+        <div class="elmnts">
+            <!-- gallery -->
+            <section id="gallery">
+                <!-- elmnts -->
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/1.jpeg" alt="project 01">
+                    <!-- title -->
+                    <div class="overlay" id="asgard">
+                        <p>home of the aesir</p>
+                        <h3>asgard</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/2.jpeg" alt="project 02">
+                    <!-- overlay -->
+                    <div class="overlay" id="alfheim">
+                        <p>home of the light elves</p>
+                        <h3>alfheim</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/3.jpeg" alt="project 03">
+                    <!-- overlay -->
+                    <div class="overlay" id="midgard">
+                        <p>home of the humans</p>
+                        <h3>midgard</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/4.jpeg" alt="project 04">
+                    <!-- overlay -->
+                    <div class="overlay" id="muspellheim">
+                        <p>home of the fire giants</p>
+                        <h3>muspellheim</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/5.jpeg" alt="project 05">
+                    <!-- overlay -->
+                    <div class="overlay" id="nidavellir">
+                        <p>home of the dwarves</p>
+                        <h3>nidavellir</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/6.jpeg" alt="project 06">
+                    <!-- overlay -->
+                    <div class="overlay" id="niflheim">
+                        <p>world of ice, fog and mist</p>
+                        <h3>niflheim</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/7.jpeg" alt="project 07">
+                    <!-- overlay -->
+                    <div class="overlay" id="vanaheim">
+                        <p>home of the vanir</p>
+                        <h3>vanaheim</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/8.jpeg" alt="project 08">
+                    <!-- overlay -->
+                    <div class="overlay" id="jotunheim">
+                        <p>home of the giants</p>
+                        <h3>jotunheim</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <div class="elmnts">
+                    <!-- img -->
+                    <img src="img/9.jpeg" alt="project 09">
+                    <!-- overlay -->
+                    <div class="overlay" id="helheim">
+                        <p>home of hel</p>
+                        <h3>helheim</h3>
+                    </div>
+                    <!-- overlay -->
+                </div>
+                <!-- elmnts -->
+            </section>
+            <!-- gallery -->
+        </div>
+        <!-- elmnts -->
+        
+    </main>
+    <!-- main -->
+
+    <!-- modal -->
+    <section id="modal" style="display:none">
+        <!-- article -->
+        <article id="article">
+            <!-- elmnts -->
+            <div class="elmnts">
+                <!-- btn exit -->
+                <button id="btn_exit"><i class="fas fa-times"></i></button>
+                <!-- btn exit -->
+            </div>
+            <div class="elmnts">
+                <!-- proj title -->
+                <h2 id="proj_name">Project Name</h2>
+                <h5 id="proj_tag">Lorem ipsum dolor sit amet </h5>
+                <!-- proj title -->
+            
+                <!-- proj desc -->
+                <p id="proj_desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, distinctio!
+                </p>
+                <!-- proj desc -->
+            </div>
+            <div class="elmnts">
+                <h5>Technologies</h5>
+                <!-- list -->
+                <ul id="list">
+                    <li>
+                        <i class="fab fa-react"></i>
+                        React</li>
+                    <li>
+                        <i class="fas fa-cube"></i>
+                        Tailwind</li>
+                    <li>
+                        <i class="fab fa-js"></i>
+                        Gatsby</li>
+                    <li>
+                        <i class="fas fa-database"></i>
+                        Netlify
+                    </li>
+                </ul>
+                <!-- list -->
+            </div>
+            <div class="elmnts">
+                <!-- links -->
+                <button id="btn_live">
+                    <!-- create link btn -->
+                    <a href="#" id="live">Live</a>
+                </button>
+                <button id="btn_repo">
+                    <!-- create git btn -->
+                    <a href="#" id="repo">Github</a>
+                </button>
+                <!-- links -->
+            </div>
+            <!-- elmnts -->
+        </article>
+        <!-- article -->
+    </section>
+    <!-- modal -->
+
+    <!-- contact -->
+    <section id="contact">
+        <!-- elmnts -->
+        <div class="elmnts">
+            <h3>Contact Details</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, maxime!</p>
+        </div>
+        <div class="elmnts">
+            <!-- list -->
+            <ul class="list">
+                <li>
+                    <a href="https://github.com/decode-harris">
+                        <i class="fab fa-github"></i>
+                        Github
+                    </a>
+                    <span>Git Repositories</span>
+                </li>
+                <li>
+                    <a href="mailto:decode.harris@gmail.com">
+                        <i class="far fa-envelope"></i>
+                        Gmail
+                    </a>
+                    <span>Direct Contact</span>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/chris-harris-b9061711a/">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <span>Employment Information</span>
+                </li>
+            </ul>
+            <!-- list -->
+        </div>
+        <!-- elmnts -->
+    </section>
+    <!-- contact -->
 
     <!-- footer -->
-    <footer class="footer" id="footer">
+    <footer id="footer">
         <!-- elmnts -->
         <div class="elmnts">
             <h3>Christopher Harris</h3>
-            <p class="tagline">
-                Web Developer
-                <br>
-                Melbourne, Aus
-            </p>
-
-            
-        </div>
-        <div class="elmnts">
-            <p>The developer thanks you kindly for visiting this page.</p>
-        </div>
-        <div class="elmnts">
-            
-            <a href="https://github.com/decode-harris">
-                <i class="fab fa-github"></i>
-                Github
-            </a>
-            <span>live projects & repositories</span>
-        </div>
-        <div class="elmnts">
-            <a href="mailto:decode.harris@gmail.com">
-                <i class="far fa-envelope"></i>
-                Gmail
-            </a>
-            <span>Direct digital contact</span>
-        </div>
-        <div class="elmnts">
-            <a href="https://www.linkedin.com/in/chris-harris-b9061711a/">
-                <i class="fab fa-linkedin"></i>
-                LinkedIn
-            </a>
-            <span>Relevant employment information</span>
+            <p>Melbourne, Australia</p>
+            <p>Web Developer & IT Professional</p>
         </div>
         <div class="elmnts">
             <a href="#body">
                 <i class="fas fa-caret-square-up"></i>
-                Top</a>
+                Top
+            </a>
+        </div>
+        <div class="elmnts">
+            <p>The developer thanks you kindly for visiting this page.</p>
         </div>
         <!-- elmnts -->
     </footer>
     <!-- footer -->
 
-    
+
+
 
 </body>
 </html>
-
