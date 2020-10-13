@@ -388,7 +388,7 @@ article button a {
 /* article : img */
 article .box {
     min-height: 200px;
-    max-height: 250px;
+    /* max-height: 250px; */
     height: 100%;
     width: 100%;
     border-bottom: 3px solid var(--black);
@@ -466,24 +466,28 @@ footer button {
     border: none;
     padding: var(--sm);
 }
-/* footer : display */
-.display {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(25px, auto);
-    width: 100%;
-}
-.display .panel {
-    grid-column: span 3;
-    grid-row: span 1;
-    border: 2px solid var(--black);
-    min-height: 150px;
-    position: relative;
+
+footer form {
+    
+    padding: var(--sm);
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+
+    border: var(--component);
+
+}
+footer form div {
+    display: flex;
+    
+
+    border: var(--debugging);
+}
+footer form label {
+    border: var(--wireframe);
+
 }
 
 /* media : desktop */
